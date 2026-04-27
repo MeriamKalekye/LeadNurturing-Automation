@@ -23,387 +23,187 @@ header {
   border-bottom: 2px solid #e0e0e0;
   margin-bottom: 30px;
 }
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a1a2e;
-}
-header p {
-  color: #666;
-  margin-top: 6px;
-  font-size: 0.95rem;
-}
+header h1 { font-size: 2rem; font-weight: 700; color: #1a1a2e; }
+header p { color: #666; margin-top: 6px; font-size: 0.95rem; }
 .logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #2d3436;
+  display: flex; justify-content: center; align-items: center; gap: 20px;
+  margin-bottom: 10px; font-weight: 600; font-size: 1.1rem; color: #2d3436;
 }
 .logos span { opacity: 0.4; }
-
 .section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 24px;
+  background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 24px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
-.section h2 {
-  font-size: 1.2rem;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-hr {
-  border: none;
-  border-top: 1px solid #e8e8e8;
-  margin: 20px 0;
-}
-
+.section h2 { font-size: 1.2rem; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+hr { border: none; border-top: 1px solid #e8e8e8; margin: 20px 0; }
 textarea {
-  width: 100%;
-  min-height: 180px;
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  font-family: monospace;
-  font-size: 0.85rem;
-  resize: vertical;
-  transition: border-color 0.2s;
+  width: 100%; min-height: 180px; border: 2px dashed #ccc; border-radius: 8px;
+  padding: 16px; font-family: monospace; font-size: 0.85rem; resize: vertical; transition: border-color 0.2s;
 }
-textarea:focus {
-  outline: none;
-  border-color: #0984e3;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 16px;
-}
+textarea:focus { outline: none; border-color: #0984e3; }
+.categories { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
 .cat-chip {
-  padding: 8px 16px;
-  border: 2px solid #dfe6e9;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  user-select: none;
+  padding: 8px 16px; border: 2px solid #dfe6e9; border-radius: 20px; cursor: pointer;
+  font-size: 0.85rem; font-weight: 500; transition: all 0.2s; user-select: none;
 }
 .cat-chip:hover { border-color: #0984e3; }
-.cat-chip.active {
-  background: #0984e3;
-  color: #fff;
-  border-color: #0984e3;
-}
-
+.cat-chip.active { background: #0984e3; color: #fff; border-color: #0984e3; }
 .btn {
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
+  padding: 12px 28px; border: none; border-radius: 8px; font-size: 0.95rem;
+  font-weight: 600; cursor: pointer; transition: all 0.2s;
 }
-.btn-primary {
-  background: #0984e3;
-  color: #fff;
-}
+.btn-sm { padding: 6px 14px; font-size: 0.8rem; }
+.btn-primary { background: #0984e3; color: #fff; }
 .btn-primary:hover { background: #0770c2; }
-.btn-secondary {
-  background: #dfe6e9;
-  color: #2d3436;
-}
+.btn-secondary { background: #dfe6e9; color: #2d3436; }
 .btn-secondary:hover { background: #b2bec3; }
-.btn-success {
-  background: #00b894;
-  color: #fff;
-}
+.btn-success { background: #00b894; color: #fff; }
 .btn-success:hover { background: #00a381; }
-.btn-warning {
-  background: #fdcb6e;
-  color: #2d3436;
-}
+.btn-warning { background: #fdcb6e; color: #2d3436; }
 .btn-warning:hover { background: #f0b73d; }
-
-.btn-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
+.btn-danger { background: #e17055; color: #fff; }
+.btn-danger:hover { background: #c0392b; }
+.btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-bottom: 20px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px; margin-bottom: 20px;
 }
-.stat-card {
-  background: #f8f9fa;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-}
-.stat-card .num {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0984e3;
-}
-.stat-card .label {
-  font-size: 0.8rem;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.table-wrap {
-  overflow-x: auto;
-  margin-top: 16px;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-}
+.stat-card { background: #f8f9fa; border-radius: 10px; padding: 16px; text-align: center; }
+.stat-card .num { font-size: 2rem; font-weight: 700; color: #0984e3; }
+.stat-card .label { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+.table-wrap { overflow-x: auto; margin-top: 16px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 th {
-  background: #f1f3f5;
-  padding: 12px 14px;
-  text-align: left;
-  font-weight: 600;
-  white-space: nowrap;
-  position: sticky;
-  top: 0;
-  border-bottom: 2px solid #dfe6e9;
+  background: #f1f3f5; padding: 12px 14px; text-align: left; font-weight: 600;
+  white-space: nowrap; position: sticky; top: 0; border-bottom: 2px solid #dfe6e9;
 }
-td {
-  padding: 10px 14px;
-  border-bottom: 1px solid #f1f3f5;
-  vertical-align: top;
-}
+td { padding: 10px 14px; border-bottom: 1px solid #f1f3f5; vertical-align: top; }
 tr:hover td { background: #f8f9fa; }
-
-.badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
+.badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
 .badge-new { background: #dfe6e9; color: #636e72; }
 .badge-enriched { background: #55efc4; color: #00695c; }
-
-.email-link {
-  color: #0984e3;
-  text-decoration: none;
-}
+.email-link { color: #0984e3; text-decoration: none; }
 .email-link:hover { text-decoration: underline; }
-
-.phone-link {
-  color: #2d3436;
-  text-decoration: none;
-}
+.phone-link { color: #2d3436; text-decoration: none; }
 .phone-link:hover { color: #0984e3; }
-
-.website-link {
-  color: #6c5ce7;
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-.rating {
-  color: #fdcb6e;
-  font-weight: 600;
-}
-
-.decision-maker {
-  font-size: 0.8rem;
-  color: #636e72;
-  font-style: italic;
-}
-
-.cat-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
+.website-link { color: #6c5ce7; text-decoration: none; font-size: 0.8rem; }
+.rating { color: #fdcb6e; font-weight: 600; }
+.decision-maker { font-size: 0.8rem; color: #636e72; font-style: italic; }
+.cat-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .cat-tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  background: #e8f4fd;
-  color: #0984e3;
+  display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem;
+  font-weight: 500; background: #e8f4fd; color: #0984e3;
 }
-
 .modal-overlay {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;
 }
 .modal-overlay.active { display: flex; }
 .modal {
-  background: #fff;
-  border-radius: 12px;
-  padding: 30px;
-  max-width: 700px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
+  background: #fff; border-radius: 12px; padding: 30px; max-width: 750px;
+  width: 90%; max-height: 85vh; overflow-y: auto;
 }
-.modal h3 {
-  font-size: 1.2rem;
-  margin-bottom: 16px;
-}
-.modal pre {
-  background: #f1f3f5;
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  white-space: pre-wrap;
-  word-break: break-word;
-  line-height: 1.5;
-}
+.modal h3 { font-size: 1.2rem; margin-bottom: 16px; }
 .modal .close-btn {
-  float: right;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #636e72;
+  float: right; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #636e72;
 }
-
 .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 12px;
-  margin-top: 12px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-top: 12px;
 }
-.service-card {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 14px;
-  border-left: 4px solid #0984e3;
-}
-.service-card h4 {
-  font-size: 0.9rem;
-  margin-bottom: 4px;
-}
-.service-card p {
-  font-size: 0.8rem;
-  color: #636e72;
-}
-
+.service-card { background: #f8f9fa; border-radius: 8px; padding: 14px; border-left: 4px solid #0984e3; }
+.service-card h4 { font-size: 0.9rem; margin-bottom: 4px; }
+.service-card p { font-size: 0.8rem; color: #636e72; }
 select {
-  padding: 8px 12px;
-  border: 2px solid #dfe6e9;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  background: #fff;
+  padding: 8px 12px; border: 2px solid #dfe6e9; border-radius: 8px; font-size: 0.85rem; background: #fff;
 }
-
-.checkbox-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 0;
-}
-.checkbox-row input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #0984e3;
-}
-
-.empty-state {
-  text-align: center;
-  padding: 60px 20px;
-  color: #b2bec3;
-}
+.checkbox-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
+.checkbox-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: #0984e3; }
+.empty-state { text-align: center; padding: 60px 20px; color: #b2bec3; }
 .empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
 .empty-state p { font-size: 0.95rem; }
-
 .pagination {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 16px;
-  font-size: 0.85rem;
-  color: #636e72;
+  display: flex; justify-content: space-between; align-items: center; margin-top: 16px;
+  font-size: 0.85rem; color: #636e72;
 }
 .pagination button {
-  padding: 6px 16px;
-  border: 1px solid #dfe6e9;
-  background: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.85rem;
+  padding: 6px 16px; border: 1px solid #dfe6e9; background: #fff; border-radius: 6px;
+  cursor: pointer; font-size: 0.85rem;
 }
 .pagination button:hover { background: #f1f3f5; }
 .pagination button:disabled { opacity: 0.4; cursor: default; }
-
-.search-bar {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
+.search-bar { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
 .search-bar input {
-  flex: 1;
-  min-width: 200px;
-  padding: 10px 14px;
-  border: 2px solid #dfe6e9;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  flex: 1; min-width: 200px; padding: 10px 14px; border: 2px solid #dfe6e9;
+  border-radius: 8px; font-size: 0.9rem;
 }
-.search-bar input:focus {
-  outline: none;
-  border-color: #0984e3;
-}
-
-.tab-bar {
-  display: flex;
-  gap: 0;
-  border-bottom: 2px solid #e0e0e0;
-  margin-bottom: 20px;
-}
+.search-bar input:focus { outline: none; border-color: #0984e3; }
+.tab-bar { display: flex; gap: 0; border-bottom: 2px solid #e0e0e0; margin-bottom: 20px; }
 .tab {
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #636e72;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
-  transition: all 0.2s;
+  padding: 10px 20px; cursor: pointer; font-weight: 500; font-size: 0.9rem; color: #636e72;
+  border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s;
 }
 .tab:hover { color: #2d3436; }
-.tab.active {
-  color: #0984e3;
-  border-bottom-color: #0984e3;
-}
-
+.tab.active { color: #0984e3; border-bottom-color: #0984e3; }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
+footer { text-align: center; padding: 20px; color: #b2bec3; font-size: 0.8rem; }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #b2bec3;
-  font-size: 0.8rem;
+/* Template editor styles */
+.tpl-group {
+  background: #fff; border-radius: 12px; margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden;
 }
+.tpl-group-header {
+  padding: 16px 24px; cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; background: #f8f9fa; border-bottom: 1px solid #e8e8e8;
+  user-select: none; transition: background 0.2s;
+}
+.tpl-group-header:hover { background: #eef2f5; }
+.tpl-group-header h3 { font-size: 1rem; margin: 0; }
+.tpl-group-header .arrow { transition: transform 0.2s; font-size: 0.8rem; color: #636e72; }
+.tpl-group-header .arrow.open { transform: rotate(90deg); }
+.tpl-group-header .seq-badge {
+  font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; background: #e8f4fd; color: #0984e3;
+}
+.tpl-group-body { display: none; padding: 0; }
+.tpl-group-body.open { display: block; }
+.tpl-sequence-tabs {
+  display: flex; gap: 0; border-bottom: 1px solid #e8e8e8; padding: 0 24px; background: #fafbfc;
+}
+.tpl-seq-tab {
+  padding: 10px 16px; cursor: pointer; font-size: 0.8rem; font-weight: 500; color: #636e72;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s;
+}
+.tpl-seq-tab:hover { color: #2d3436; }
+.tpl-seq-tab.active { color: #0984e3; border-bottom-color: #0984e3; }
+.tpl-editor-area { padding: 24px; }
+.tpl-view-toggle {
+  display: flex; gap: 0; margin-bottom: 12px; border: 1px solid #dfe6e9; border-radius: 6px;
+  overflow: hidden; width: fit-content;
+}
+.tpl-view-btn {
+  padding: 6px 16px; font-size: 0.8rem; cursor: pointer; border: none; background: #fff;
+  color: #636e72; font-weight: 500; transition: all 0.2s;
+}
+.tpl-view-btn.active { background: #0984e3; color: #fff; }
+.tpl-preview {
+  border: 1px solid #e8e8e8; border-radius: 8px; padding: 0; min-height: 300px;
+  max-height: 500px; overflow-y: auto; background: #fff;
+}
+.tpl-preview iframe {
+  width: 100%; min-height: 300px; border: none; display: block;
+}
+.tpl-code {
+  width: 100%; min-height: 300px; max-height: 500px; border: 1px solid #dfe6e9;
+  border-radius: 8px; padding: 12px; font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.8rem; resize: vertical; line-height: 1.5; tab-size: 2;
+}
+.tpl-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+.tpl-saved-msg {
+  font-size: 0.8rem; color: #00b894; font-weight: 500; margin-left: 8px; opacity: 0;
+  transition: opacity 0.3s;
+}
+.tpl-saved-msg.show { opacity: 1; }
 
 @media (max-width: 768px) {
   .container { padding: 12px; }
@@ -436,10 +236,8 @@ footer {
       <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">
         Paste the raw output from your n8n Google Maps workflow below. Each lead block will be automatically parsed.
       </p>
-      <textarea id="rawLeads" placeholder="Paste your n8n lead data here...&#10;&#10;Example:&#10;ChIJsb-FqpFv5kcRdntFjjxAbMo&#10;Iris - School Sup&eacute;rieure D'informatique&#10;6-8 Imp. des 2 Cousins, 75017 Paris, France&#10;+33 1 44 01 86 70&#10;https://ecoleiris.fr/&#10;4.2&#10;18&#10;Computer training school&#10;..."></textarea>
-
+      <textarea id="rawLeads" placeholder="Paste your n8n lead data here..."></textarea>
       <hr>
-
       <h2>Select Target Categories</h2>
       <div class="categories" id="categoryChips">
         <div class="cat-chip active" data-cat="bts-bachelor">BTS / Bachelor</div>
@@ -448,10 +246,9 @@ footer {
         <div class="cat-chip active" data-cat="ai">AI Programs</div>
         <div class="cat-chip active" data-cat="jury">Jury for Exams</div>
         <div class="cat-chip active" data-cat="replacement">Last Minute Teacher Replacement</div>
+        <div class="cat-chip active" data-cat="toeic">TOEIC Preparation</div>
       </div>
-
       <hr>
-
       <h2>Enrichment Options</h2>
       <div class="checkbox-row">
         <input type="checkbox" id="optEmails" checked>
@@ -465,7 +262,6 @@ footer {
         <input type="checkbox" id="optServices" checked>
         <label for="optServices">Match relevant Linguistic Communication services per lead</label>
       </div>
-
       <div class="btn-group">
         <button class="btn btn-primary" onclick="parseAndEnrich()">Parse &amp; Enrich Leads</button>
         <button class="btn btn-secondary" onclick="loadSample()">Load Sample Data</button>
@@ -483,7 +279,6 @@ footer {
         <div class="stat-card"><div class="num" id="statEmails">0</div><div class="label">Emails Found</div></div>
         <div class="stat-card"><div class="num" id="statCategories">0</div><div class="label">Categories</div></div>
       </div>
-
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search leads by name, email, city..." oninput="renderTable()">
         <select id="filterStatus" onchange="renderTable()">
@@ -499,15 +294,14 @@ footer {
           <option value="ai">AI Programs</option>
           <option value="jury">Jury for Exams</option>
           <option value="replacement">Last Minute Replacement</option>
+          <option value="toeic">TOEIC Preparation</option>
         </select>
       </div>
-
       <div class="btn-group" style="margin-top:0;margin-bottom:16px;">
         <button class="btn btn-success" onclick="exportCSV()">Export CSV</button>
         <button class="btn btn-warning" onclick="generateAllEmails()">Generate Outreach Emails</button>
         <button class="btn btn-secondary" onclick="exportHubSpot()">Export for HubSpot</button>
       </div>
-
       <div class="table-wrap">
         <table id="leadsTable">
           <thead>
@@ -528,12 +322,10 @@ footer {
           <tbody id="leadsBody"></tbody>
         </table>
       </div>
-
       <div id="emptyState" class="empty-state">
         <div class="icon">No leads yet</div>
         <p>Go to the Import tab to paste and parse your n8n leads</p>
       </div>
-
       <div class="pagination" id="pagination" style="display:none;">
         <span id="pageInfo"></span>
         <div>
@@ -546,12 +338,17 @@ footer {
 
   <!-- EMAIL TEMPLATES TAB -->
   <div class="tab-content" id="tab-templates">
-    <div class="section">
-      <h2>Outreach Email Templates</h2>
-      <p style="font-size:0.85rem;color:#666;margin-bottom:16px;">
-        Pre-built email templates for each service category. Click to customize and copy.
-      </p>
-
+    <div class="section" style="background:transparent;box-shadow:none;padding:0;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div>
+          <h2 style="margin-bottom:4px;">Email Templates</h2>
+          <p style="font-size:0.85rem;color:#666;">
+            Your HubSpot email templates with 3-step sequences. Click to preview, edit, and copy.
+            Uses <code>{{ contact.firstname }}</code> and <code>{{ contact.company }}</code> HubSpot variables.
+          </p>
+        </div>
+        <button class="btn btn-danger btn-sm" onclick="resetAllTemplates()">Reset All to Default</button>
+      </div>
       <div id="templateList"></div>
     </div>
   </div>
@@ -564,45 +361,19 @@ footer {
         Services matched to leads based on school type and selected categories.
       </p>
       <div class="service-grid">
-        <div class="service-card">
-          <h4>BTS / Bachelor Programs</h4>
-          <p>Specialized IT &amp; management instructors for BTS SIO, BTS NDRC, Bachelor programs. Technologies Num&eacute;riques, Python, databases, cloud, cybersecurity.</p>
-        </div>
-        <div class="service-card">
-          <h4>MBA / Masters Programs</h4>
-          <p>IT project management, cloud computing, cybersecurity, AI modules. Strategic marketing, business intelligence, enterprise strategy.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#00b894;">
-          <h4>Agile Training Programs</h4>
-          <p>SCRUM, Kanban, DevOps, Lean Startup, Design Thinking. Certified trainers for academic programs.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#6c5ce7;">
-          <h4>AI &amp; Digital Programs</h4>
-          <p>Artificial Intelligence, Machine Learning, GenAI automation. AI Agents deployment and training modules.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#fdcb6e;">
-          <h4>Jury for Exams</h4>
-          <p>Professional jury members for BTS, Bachelor, and Master certification exams. Experienced industry professionals.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#e17055;">
-          <h4>Last Minute Teacher Replacement</h4>
-          <p>Express teaching interventions. Qualified substitute instructors available on short notice for IT, management, and English courses.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#00cec9;">
-          <h4>TOEIC Preparation</h4>
-          <p>TOEIC administration and preparation programs. Standardized English testing for academic institutions.</p>
-        </div>
-        <div class="service-card" style="border-left-color:#e84393;">
-          <h4>AI Agents &amp; Automation</h4>
-          <p>Deploy reliable AI agents for daily operations. Social media automation, workflow optimization, GenAI solutions.</p>
-        </div>
+        <div class="service-card"><h4>BTS / Bachelor Programs</h4><p>Specialized IT &amp; management instructors for BTS SIO, BTS NDRC, Bachelor. Technologies Num&eacute;riques, Python, databases, cloud, cybersecurity.</p></div>
+        <div class="service-card"><h4>MBA / Masters Programs</h4><p>IT project management, cloud computing, cybersecurity, AI modules. Strategic marketing, business intelligence, enterprise strategy.</p></div>
+        <div class="service-card" style="border-left-color:#00b894;"><h4>Agile Training Programs</h4><p>SCRUM, Kanban, DevOps, Lean Startup, Design Thinking. Certified trainers for academic programs.</p></div>
+        <div class="service-card" style="border-left-color:#6c5ce7;"><h4>AI &amp; Digital Programs</h4><p>Artificial Intelligence, Machine Learning, GenAI automation. AI Agents deployment and training modules.</p></div>
+        <div class="service-card" style="border-left-color:#fdcb6e;"><h4>Jury for Exams</h4><p>Professional jury members for BTS, Bachelor, and Master certification exams. Experienced industry professionals.</p></div>
+        <div class="service-card" style="border-left-color:#e17055;"><h4>Last Minute Teacher Replacement</h4><p>Express teaching interventions. Qualified substitute instructors available on short notice.</p></div>
+        <div class="service-card" style="border-left-color:#00cec9;"><h4>TOEIC Preparation</h4><p>TOEIC administration and preparation programs. Standardized English testing for academic institutions.</p></div>
+        <div class="service-card" style="border-left-color:#e84393;"><h4>AI Agents &amp; Automation</h4><p>Deploy reliable AI agents for daily operations. Social media automation, workflow optimization, GenAI solutions.</p></div>
       </div>
     </div>
   </div>
 
-  <footer>
-    Linguistic Communication &mdash; Lead Nurturing Automation &mdash; linguistic-communication.com
-  </footer>
+  <footer>Linguistic Communication &mdash; Lead Nurturing Automation &mdash; linguistic-communication.com</footer>
 </div>
 
 <!-- EMAIL MODAL -->
@@ -610,9 +381,10 @@ footer {
   <div class="modal">
     <button class="close-btn" onclick="closeModal()">&times;</button>
     <h3 id="modalTitle">Email Template</h3>
-    <pre id="modalContent"></pre>
+    <div id="modalPreview" style="border:1px solid #e8e8e8;border-radius:8px;padding:20px;margin-bottom:12px;max-height:400px;overflow-y:auto;"></div>
     <div class="btn-group" style="margin-top:16px;">
-      <button class="btn btn-primary" onclick="copyModalContent()">Copy to Clipboard</button>
+      <button class="btn btn-primary" onclick="copyModalHTML()">Copy HTML</button>
+      <button class="btn btn-secondary" onclick="copyModalText()">Copy Plain Text</button>
       <button class="btn btn-secondary" onclick="closeModal()">Close</button>
     </div>
   </div>
@@ -629,7 +401,8 @@ const CATEGORIES = {
   'agile': 'Agile Programs',
   'ai': 'AI Programs',
   'jury': 'Jury for Exams',
-  'replacement': 'Last Minute Replacement'
+  'replacement': 'Last Minute Replacement',
+  'toeic': 'TOEIC Preparation'
 };
 
 const DECISION_MAKERS = [
@@ -651,134 +424,553 @@ const SCHOOL_TYPE_TO_ROLES = {
 };
 
 const SCHOOL_TYPE_TO_CATEGORIES = {
-  'computer training school': ['bts-bachelor', 'ai', 'agile'],
-  'graduate school': ['mba-masters', 'ai', 'agile'],
-  'private educational institution': ['bts-bachelor', 'mba-masters', 'jury'],
-  'vocational school': ['bts-bachelor', 'replacement', 'jury'],
-  'senior high school': ['bts-bachelor', 'jury', 'replacement'],
-  'high school': ['bts-bachelor', 'jury', 'replacement']
+  'computer training school': ['bts-bachelor', 'ai', 'agile', 'toeic'],
+  'graduate school': ['mba-masters', 'ai', 'agile', 'toeic'],
+  'private educational institution': ['bts-bachelor', 'mba-masters', 'jury', 'toeic'],
+  'vocational school': ['bts-bachelor', 'replacement', 'jury', 'toeic'],
+  'senior high school': ['bts-bachelor', 'jury', 'replacement', 'toeic'],
+  'high school': ['bts-bachelor', 'jury', 'replacement', 'toeic']
 };
 
-const EMAIL_TEMPLATES = {
+// ===================== HUBSPOT HTML TEMPLATES =====================
+const DEFAULT_TEMPLATES = {
   'bts-bachelor': {
-    subject: 'Partenariat enseignement BTS/Bachelor - Linguistic Communication',
-    body: `Bonjour {DECISION_MAKER},
-
-Je me permets de vous contacter au nom de Linguistic Communication, sp\u00e9cialiste en enseignement IT, Management et Communication pour les \u00e9tablissements d'enseignement sup\u00e9rieur.
-
-Nous proposons des intervenants sp\u00e9cialis\u00e9s pour vos programmes BTS SIO, BTS NDRC et Bachelor dans les domaines suivants :
-- Technologies Num\u00e9riques (Python, bases de donn\u00e9es, cloud, cybers\u00e9curit\u00e9)
-- Management et Marketing Digital
-- Communication professionnelle
-- Pr\u00e9paration TOEIC
-
-Nous serions ravis d'\u00e9changer sur la possibilit\u00e9 d'int\u00e9grer nos programmes \u00e0 votre \u00e9tablissement {SCHOOL_NAME}.
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
+    name: 'BTS / Bachelor',
+    color: '#0066cc',
+    emails: [
+      {
+        label: 'Email 1 — First Contact',
+        subject: 'Partenariat enseignement BTS/Bachelor — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je contacte afin d'explorer une opportunit\u00e9 de collaboration entre <strong>Linguistic Communication</strong> et <strong>{{ contact.company }}</strong> pour vos parcours BTS et Bachelor.</p>
+        <p>Nous proposons des formations en anglais ou fran\u00e7ais con\u00e7ues pour s'aligner sur les r\u00e9f\u00e9rentiels et les r\u00e9alit\u00e9s p\u00e9dagogiques de fili\u00e8res telles que BTS SIO, BTS NDRC, BTS CG et Communication, ainsi que sur les besoins des cursus Bachelor.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>Notre offre BTS / Bachelor :</strong> Des modules d'anglais technique et professionnel \u00ab cl\u00e9s en main \u00bb, synchronis\u00e9s avec les mati\u00e8res m\u00e9tiers, les projets, les soutenances, les stages et l'alternance.
+        </div>
+        <div style="margin: 20px 0;">
+            <h3 style="color: #0066cc;">Exemples de modules sp\u00e9cialis\u00e9s :</h3>
+            <ul>
+                <li><strong>SPE-10 / Corporate IT and Information Systems :</strong> communication professionnelle en contexte informatique</li>
+                <li><strong>SPE-20 / Operating Systems and Business Applications :</strong> environnements Windows, macOS, Linux et applications m\u00e9tiers</li>
+                <li><strong>SPE-30 / Networks and End-User Support :</strong> r\u00e9seaux et support utilisateurs en contexte bilingue</li>
+                <li><strong>SPE-40 / Corporate IT Security Auditing :</strong> audit et s\u00e9curit\u00e9 informatique en entreprise</li>
+                <li><strong>SPE-50 / Making Presentations :</strong> pr\u00e9paration du m\u00e9moire, des pr\u00e9sentations et de la soutenance orale en anglais</li>
+            </ul>
+        </div>
+        <div style="margin: 20px 0;">
+            <h3 style="color: #0066cc;">Aupr\u00e8s de nos clients nous offrons les services compl\u00e9mentaires :</h3>
+            <ul>
+                <li><strong>Jurys d'examen</strong> pour accompagner vos \u00e9valuations orales, professionnelles ou certifiantes</li>
+                <li><strong>Remplacement d'enseignant</strong> en derni\u00e8re minute en cas d'absence impr\u00e9vue</li>
+                <li><strong>Pr\u00e9paration et administration du TOEIC</strong> avec des intervenants exp\u00e9riment\u00e9s</li>
+            </ul>
+        </div>
+        <h3 style="color: #0066cc;">Pourquoi Linguistic Communication ?</h3>
+        <ul>
+            <li><strong>Expertise terrain :</strong> \u00c9quipe d'intervenants issus du monde professionnel. Taux de pr\u00e9sence 110%</li>
+            <li><strong>Approche op\u00e9rationnelle :</strong> des contenus directement exploitables en classe, en projet et en stage.</li>
+            <li><strong>Souplesse d'intervention :</strong> modules semestriels, interventions cibl\u00e9es, pr\u00e9paration aux soutenances, jurys et remplacements express.</li>
+        </ul>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un appel</a>
+        </div>
+        <p>Je serais ravi de vous pr\u00e9senter nos programmes plus en d\u00e9tail et d'\u00e9changer sur la mani\u00e8re dont nous pourrions enrichir l'offre p\u00e9dagogique de <strong>{{ contact.company }}</strong>.</p>
+        <p>Vous pouvez consulter l'ensemble de nos modules et services ici :<br>
+        <a href="https://linguistic-communication.com/bts-et-bachelor/" style="color: #0066cc;">linguistic-communication.com/bts-et-bachelor/</a><br>
+        <a href="https://linguistic-communication.com" style="color: #0066cc;">linguistic-communication.com</a></p>
+        <p>Bien cordialement,<br>
+        <strong>Alexis Andr\u00e9 des Forges</strong><br>
+        Directeur \u2014 Linguistic Communication<br>
+        T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="Linguistic Communication" style="max-width: 150px; height: auto;">
+            </div>
+            <p><strong>Linguistic Communication</strong><br>Paris, France</p>
+            <div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;">
+                <img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;">
+                <p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p>
+            </div>
+        </div>
+    </div>`
+      },
+      {
+        label: 'Email 2 — Follow-up',
+        subject: 'Relance BTS/Bachelor — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je reviens vers vous suite \u00e0 mon pr\u00e9c\u00e9dent message concernant une collaboration entre <strong>Linguistic Communication</strong> et <strong>{{ contact.company }}</strong>.</p>
+        <p>La rentr\u00e9e approchant, je souhaitais vous rappeler que nous proposons des modules d'anglais technique et professionnel directement align\u00e9s sur les r\u00e9f\u00e9rentiels BTS SIO, NDRC, CG et Bachelor \u2014 pr\u00eats \u00e0 \u00eatre int\u00e9gr\u00e9s dans vos plannings.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>Ce que nous apportons concr\u00e8tement :</strong> Des intervenants op\u00e9rationnels, une souplesse d'intervention (modules semestriels, jurys, remplacements express) et un accompagnement TOEIC cl\u00e9s en main.
+        </div>
+        <p>Nous intervenons d\u00e9j\u00e0 aupr\u00e8s de plusieurs \u00e9tablissements priv\u00e9s en \u00cele-de-France. Un \u00e9change de 15 minutes suffirait pour voir comment adapter notre offre aux besoins sp\u00e9cifiques de <strong>{{ contact.company }}</strong>.</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Planifier un \u00e9change de 15 min</a>
+        </div>
+        <p><a href="https://linguistic-communication.com/bts-et-bachelor/" style="color: #0066cc;">linguistic-communication.com/bts-et-bachelor/</a></p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
+            <div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="Linguistic Communication" style="max-width: 150px; height: auto;"></div>
+            <p><strong>Linguistic Communication</strong><br>Paris, France</p>
+            <div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div>
+        </div>
+    </div>`
+      },
+      {
+        label: 'Email 3 — Last Chance',
+        subject: 'Dernier message — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je souhaitais simplement m'assurer que mes pr\u00e9c\u00e9dents messages ne vous avaient pas \u00e9chapp\u00e9. Je comprends parfaitement que les plannings sont charg\u00e9s en cette p\u00e9riode.</p>
+        <p>Pour r\u00e9sumer en quelques mots : <strong>Linguistic Communication</strong> propose des modules d'anglais technique <strong>cl\u00e9s en main</strong> pour les fili\u00e8res BTS SIO, NDRC, CG et Bachelor, ainsi que des services de jurys d'examen, remplacement d'enseignant et pr\u00e9paration TOEIC.</p>
+        <p>Nous intervenons d\u00e9j\u00e0 aupr\u00e8s de plusieurs \u00e9coles priv\u00e9es en \u00cele-de-France et pourrions d\u00e9marrer rapidement avec <strong>{{ contact.company }}</strong>.</p>
+        <p>Si le sujet vous int\u00e9resse, m\u00eame pour une prochaine rentr\u00e9e, je serais ravi d'en \u00e9changer avec vous :</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un cr\u00e9neau de 15 min</a>
+        </div>
+        <p>Dans le cas contraire, je ne vous importunerai plus. Merci pour votre temps.</p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;">
+            <div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="Linguistic Communication" style="max-width: 150px; height: auto;"></div>
+            <p><strong>Linguistic Communication</strong><br>Paris, France</p>
+            <div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div>
+        </div>
+    </div>`
+      }
+    ]
   },
   'mba-masters': {
-    subject: 'Intervenants MBA/Masters - Linguistic Communication',
-    body: `Bonjour {DECISION_MAKER},
-
-Linguistic Communication propose des modules d'enseignement sp\u00e9cialis\u00e9s pour les programmes MBA et Masters :
-- Management de projets IT et Cloud Computing
-- Cybers\u00e9curit\u00e9 et Intelligence Artificielle
-- Strat\u00e9gie d'entreprise et Business Intelligence
-- Marketing strat\u00e9gique et CRM
-
-Nos intervenants sont des professionnels exp\u00e9riment\u00e9s, capables de transmettre une expertise concr\u00e8te \u00e0 vos \u00e9tudiants de {SCHOOL_NAME}.
-
-Seriez-vous disponible pour un \u00e9change la semaine prochaine ?
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
-  },
-  'agile': {
-    subject: 'Formations Agiles pour votre \u00e9tablissement - Linguistic Communication',
-    body: `Bonjour {DECISION_MAKER},
-
-Nous proposons des formations certifiantes en m\u00e9thodologies Agiles :
-- SCRUM (Product Owner, Scrum Master)
-- Kanban et Lean Management
-- DevOps et int\u00e9gration continue
-- Design Thinking et Lean Startup
-
-Ces modules peuvent \u00eatre int\u00e9gr\u00e9s \u00e0 vos cursus existants \u00e0 {SCHOOL_NAME} pour renforcer l'employabilit\u00e9 de vos dipl\u00f4m\u00e9s.
-
-Pouvons-nous convenir d'un rendez-vous ?
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
+    name: 'MBA / Masters',
+    color: '#0066cc',
+    emails: [
+      {
+        label: 'Email 1 — First Contact',
+        subject: 'Partenariat MBA/Masters — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je contacte afin d'explorer une opportunit\u00e9 de collaboration entre <strong>Linguistic Communication</strong> et <strong>{{ contact.company }}</strong> pour vos parcours Master et MBA.</p>
+        <p>Nous proposons des modules bilingues de haut niveau alliant vision strat\u00e9gique et ma\u00eetrise technologique, d\u00e9j\u00e0 adopt\u00e9s par des institutions comme ABS, IPI et INGETIS.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>Notre offre Executive :</strong> Des formations bilingues \u00ab cl\u00e9s en main \u00bb con\u00e7ues pour les parcours MBA et Master, align\u00e9es sur les r\u00e9f\u00e9rentiels RNCP et Qualiopi.
+        </div>
+        <div style="margin: 20px 0;">
+            <h3 style="color: #0066cc;">Nos domaines d'expertise (Master Level) :</h3>
+            <ul>
+                <li><strong>IT / Agile Project Management :</strong> Cloud Computing, Digital Transformation, IT Risk Management et Enterprise Architecture.</li>
+                <li><strong>Scrum Roles :</strong> Scrum Master, Product Owner, Development Team, Kanban, DevOps, SAFe.</li>
+                <li><strong>AI MBA Portfolio :</strong> LLMs &amp; Prompt Engineering, Agentic AI, Business Intelligence et Big Data Monetization.</li>
+                <li><strong>Innovation &amp; Agile :</strong> Design Thinking, Lean Startup, SCRUM Master et SAFe Essentials.</li>
+                <li><strong>Strategy &amp; Operations :</strong> International Marketing Strategy, Cybersecurity, Digital Analytics et Enterprise Strategy.</li>
+            </ul>
+        </div>
+        <h3 style="color: #0066cc;">Une ing\u00e9nierie p\u00e9dagogique agile :</h3>
+        <ul>
+            <li><strong>Formats flexibles :</strong> En pr\u00e9sentiel, hybride ou asynchrone.</li>
+            <li><strong>Certification RNCP :</strong> Accompagnement dans l'alignement de vos programmes.</li>
+            <li><strong>Bilingue natif :</strong> Tous nos modules sont disponibles en anglais et en fran\u00e7ais.</li>
+        </ul>
+        <h3 style="color: #0066cc;">Services compl\u00e9mentaires :</h3>
+        <ul>
+            <li><strong>Jurys d'examen</strong></li>
+            <li><strong>Remplacement d'enseignant</strong> en derni\u00e8re minute</li>
+            <li><strong>Pr\u00e9paration et administration du TOEIC</strong></li>
+        </ul>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un appel strat\u00e9gique</a>
+        </div>
+        <p>Consultez notre portfolio MBA :<br>
+        <a href="https://linguistic-communication.com/course-category/management/mba/" style="color: #0066cc;">linguistic-communication.com/management/mba/</a><br>
+        <a href="https://linguistic-communication.com/course-category/agile/" style="color: #0066cc;">linguistic-communication.com/agile/</a></p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      },
+      {
+        label: 'Email 2 — Follow-up',
+        subject: 'Relance MBA/Masters — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je reviens vers vous suite \u00e0 mon pr\u00e9c\u00e9dent message concernant un partenariat entre <strong>Linguistic Communication</strong> et <strong>{{ contact.company }}</strong> pour vos parcours Master et MBA.</p>
+        <p>Nos modules bilingues en IT / Agile Project Management, Scrum (Scrum Master, Product Owner, Kanban, DevOps, SAFe) et AI MBA sont d\u00e9j\u00e0 d\u00e9ploy\u00e9s dans plusieurs \u00e9coles parisiennes.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>Un point cl\u00e9 :</strong> Nous accompagnons \u00e9galement l'alignement de vos programmes sur les normes RNCP et Qualiopi, avec des formats pr\u00e9sentiel, hybride ou asynchrone.
+        </div>
+        <p>Un appel de 15 minutes suffirait pour voir comment nos modules pourraient s'int\u00e9grer dans l'offre p\u00e9dagogique de <strong>{{ contact.company }}</strong> d\u00e8s la prochaine rentr\u00e9e.</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Planifier un \u00e9change de 15 min</a>
+        </div>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      },
+      {
+        label: 'Email 3 — Last Chance',
+        subject: 'Dernier message MBA/Masters — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je souhaitais simplement m'assurer que mes pr\u00e9c\u00e9dents messages ne vous avaient pas \u00e9chapp\u00e9. Je comprends que cette p\u00e9riode est charg\u00e9e.</p>
+        <p>En r\u00e9sum\u00e9 : <strong>Linguistic Communication</strong> propose des modules bilingues MBA et Master en <strong>IT / Agile Project Management</strong> (Scrum Master, Product Owner, Kanban, DevOps, SAFe), <strong>AI &amp; Business Intelligence</strong> et <strong>Strat\u00e9gie digitale</strong>, d\u00e9j\u00e0 d\u00e9ploy\u00e9s dans plusieurs \u00e9coles parisiennes.</p>
+        <p>Si enrichir l'offre p\u00e9dagogique de <strong>{{ contact.company }}</strong> avec des intervenants bilingues exp\u00e9riment\u00e9s vous int\u00e9resse, m\u00eame pour une prochaine rentr\u00e9e :</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un cr\u00e9neau de 15 min</a>
+        </div>
+        <p>Dans le cas contraire, je ne vous importunerai plus. Merci pour votre temps.</p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #0066cc;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      }
+    ]
   },
   'ai': {
-    subject: 'Programmes IA & GenAI pour {SCHOOL_NAME}',
-    body: `Bonjour {DECISION_MAKER},
-
-L'Intelligence Artificielle transforme le march\u00e9 du travail. Linguistic Communication propose des modules sp\u00e9cialis\u00e9s :
-- Intelligence Artificielle et Machine Learning
-- GenAI et Agents IA (d\u00e9ploiement et automatisation)
-- Python pour la Data Science
-- Automatisation des processus par IA
-
-Nous accompagnons les \u00e9tablissements comme {SCHOOL_NAME} dans l'int\u00e9gration de ces comp\u00e9tences cl\u00e9s dans leurs programmes.
-
-Seriez-vous int\u00e9ress\u00e9(e) par une pr\u00e9sentation de nos modules ?
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
+    name: 'AI Agents & Automation',
+    color: '#16a34a',
+    emails: [
+      {
+        label: 'Email 1 — First Contact',
+        subject: 'AI Agents & Automation — {{ contact.company }}',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <h1>AI Agents & Automation \u2014 {{ contact.company }}</h1>
+        <p>D\u00e9ployez des agents IA fiables et automatisez vos op\u00e9rations quotidiennes.</p>
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je vous contacte concernant les services d'automatisation de <strong>Linguistic Communication</strong> pour accompagner {{ contact.company }} dans l'int\u00e9gration de l'IA G\u00e9n\u00e9rative.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>Notre Offre Automation :</strong> Nous aidons les entreprises \u00e0 d\u00e9ployer des agents IA et des flux de travail automatis\u00e9s pour augmenter la productivit\u00e9 sans ajouter de risque op\u00e9rationnel.
+        </div>
+        <div style="margin: 20px 0;">
+            <h3 style="color: #0066cc;">Nos Services & Formations :</h3>
+            <ul>
+                <li><strong>AI Agents & GenAI :</strong> D\u00e9ploiement d'assistants IA sp\u00e9cialis\u00e9s pour vos d\u00e9partements.</li>
+                <li><strong>Workflow Automation :</strong> Int\u00e9gration via MCP & n8n pour automatiser les t\u00e2ches r\u00e9p\u00e9titives.</li>
+                <li><strong>Agentic AI for Business :</strong> Conception d'agents capables d'ex\u00e9cuter des actions complexes.</li>
+                <li><strong>LLM & Prompt Engineering :</strong> Formation de vos \u00e9quipes (GPT-4, Claude, Llama).</li>
+                <li><strong>Data Extraction :</strong> Automatisation de la collecte et de la visualisation de donn\u00e9es multi-sources.</li>
+            </ul>
+        </div>
+        <h3 style="color: #0066cc;">Pourquoi choisir Linguistic Communication ?</h3>
+        <ul>
+            <li><strong>Expertise Technique :</strong> Ma\u00eetrise des derniers outils (n8n, Model Context Protocol).</li>
+            <li><strong>Approche Orient\u00e9e ROI :</strong> Focus sur les gains de temps imm\u00e9diats.</li>
+            <li><strong>S\u00e9curit\u00e9 :</strong> Int\u00e9gration respectant vos contraintes de confidentialit\u00e9.</li>
+        </ul>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #16a34a; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un appel strat\u00e9gique</a>
+        </div>
+        <p>D\u00e9couvrez nos solutions : <a href="https://linguistic-communication.com/automation/" style="color: #16a34a;">linguistic-communication.com/automation/</a></p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #16a34a;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      },
+      {
+        label: 'Email 2 — Follow-up',
+        subject: 'Relance Automation — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je reviens vers vous suite \u00e0 mon pr\u00e9c\u00e9dent message concernant nos services d'automatisation et d'IA pour <strong>{{ contact.company }}</strong>.</p>
+        <p>L'int\u00e9gration de l'IA g\u00e9n\u00e9rative dans les processus m\u00e9tiers est devenue un enjeu majeur. Nous accompagnons d\u00e9j\u00e0 plusieurs entreprises dans le d\u00e9ploiement d'agents IA et l'automatisation de leurs flux de travail.</p>
+        <div style="background-color: #e6f2ff; padding: 15px; border-left: 4px solid #0066cc; margin: 20px 0;">
+            <strong>R\u00e9sultats concrets :</strong> Nos clients r\u00e9duisent de 40 \u00e0 60% le temps consacr\u00e9 aux t\u00e2ches r\u00e9p\u00e9titives gr\u00e2ce \u00e0 nos solutions (n8n, MCP, agents IA sp\u00e9cialis\u00e9s).
+        </div>
+        <p>Un \u00e9change de 15 minutes suffirait pour identifier les processus de <strong>{{ contact.company }}</strong> qui b\u00e9n\u00e9ficieraient le plus d'une automatisation intelligente.</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Planifier un \u00e9change de 15 min</a>
+        </div>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #16a34a;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      },
+      {
+        label: 'Email 3 — Last Chance',
+        subject: 'Dernier message Automation — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <p>Bonjour {{ contact.firstname or 'Madame, Monsieur' }},</p>
+        <p>Je souhaitais simplement m'assurer que mes pr\u00e9c\u00e9dents messages ne vous avaient pas \u00e9chapp\u00e9. Je comprends que les priorit\u00e9s sont nombreuses.</p>
+        <p>En r\u00e9sum\u00e9 : <strong>Linguistic Communication</strong> accompagne les entreprises dans le d\u00e9ploiement d'<strong>agents IA</strong>, l'<strong>automatisation de flux de travail</strong> (n8n, MCP) et la <strong>formation aux LLMs</strong> \u2014 avec un focus sur le ROI imm\u00e9diat et la s\u00e9curit\u00e9 des donn\u00e9es.</p>
+        <p>Si l'automatisation des processus de <strong>{{ contact.company }}</strong> est un sujet d'int\u00e9r\u00eat, m\u00eame \u00e0 moyen terme :</p>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #0066cc; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un cr\u00e9neau de 15 min</a>
+        </div>
+        <p>Dans le cas contraire, je ne vous importunerai plus. Merci pour votre temps.</p>
+        <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #16a34a;">06 75 08 12 01</a></p>
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+    </div>`
+      }
+    ]
   },
   'jury': {
-    subject: 'Membres de jury professionnel - Linguistic Communication',
-    body: `Bonjour {DECISION_MAKER},
-
-Linguistic Communication met \u00e0 votre disposition des membres de jury professionnels pour vos examens de certification BTS, Bachelor et Masters.
-
-Nos jury members sont des professionnels en activit\u00e9 dans les secteurs IT, Management et Communication, apportant une \u00e9valuation pertinente et align\u00e9e avec les attentes du march\u00e9.
-
-Si {SCHOOL_NAME} recherche des jury members pour les prochaines sessions, n'h\u00e9sitez pas \u00e0 nous contacter.
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
+    name: 'Jury pour Examens',
+    color: '#e65100',
+    emails: [
+      {
+        label: 'Email — Jury d\'examen',
+        subject: 'Membres de jury professionnel — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <p>Bonjour,</p>
+    <p>La p\u00e9riode des examens approche \u00e0 grands pas et je reviens vers vous pour un sujet concret : <strong>les jurys d'examen</strong>.</p>
+    <div style="background-color: #fff3e0; padding: 15px; border-left: 4px solid #e65100; margin: 20px 0;">
+        <strong>\u23f0 Examens mai-juin 2026 :</strong> Vous cherchez des membres de jury qualifi\u00e9s pour vos soutenances orales, \u00e9preuves professionnelles ou certifiantes ? Linguistic Communication met \u00e0 votre disposition des intervenants exp\u00e9riment\u00e9s, disponibles rapidement.
+    </div>
+    <h3 style="color: #e65100;">Ce que nous proposons :</h3>
+    <ul>
+        <li><strong>Jurys pour BTS :</strong> SIO, NDRC, CG, Communication</li>
+        <li><strong>Jurys pour Bachelor et Master :</strong> soutenances de m\u00e9moire, projets de fin d'\u00e9tudes</li>
+        <li><strong>Jurys pour MBA :</strong> \u00e9valuations en anglais, pr\u00e9sentations de projets Agile/IT</li>
+        <li><strong>Intervenants bilingues</strong> (anglais/fran\u00e7ais) issus du monde professionnel</li>
+        <li><strong>Disponibilit\u00e9 garantie</strong> \u2014 mobilisation sous 48h si n\u00e9cessaire</li>
+    </ul>
+    <h3 style="color: #e65100;">Pourquoi faire appel \u00e0 nous ?</h3>
+    <ul>
+        <li><strong>Expertise m\u00e9tier :</strong> nos jurys connaissent les r\u00e9f\u00e9rentiels et les attentes des commissions</li>
+        <li><strong>Fiabilit\u00e9 :</strong> taux de pr\u00e9sence de 110%</li>
+        <li><strong>Souplesse :</strong> intervention ponctuelle ou sur plusieurs sessions</li>
+    </ul>
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #e65100; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">R\u00e9server un jury \u2014 Appel de 15 min</a>
+    </div>
+    <p>Les sessions d'examen se remplissent vite. Contactez-nous d\u00e8s maintenant pour s\u00e9curiser la disponibilit\u00e9 de nos intervenants.</p>
+    <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #e65100;">06 75 08 12 01</a></p>
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+</div>`
+      }
+    ]
   },
   'replacement': {
-    subject: 'Remplacement enseignant urgent - Linguistic Communication',
-    body: `Bonjour {DECISION_MAKER},
-
-Linguistic Communication propose un service de remplacement d'enseignants en urgence pour les \u00e9tablissements d'enseignement sup\u00e9rieur.
-
-Nos intervenants qualifi\u00e9s sont disponibles sous court d\u00e9lai pour assurer la continuit\u00e9 p\u00e9dagogique dans les mati\u00e8res suivantes :
-- Informatique et Technologies Num\u00e9riques
-- Management et Marketing
-- Anglais professionnel et TOEIC
-- Communication
-
-N'h\u00e9sitez pas \u00e0 nous contacter en cas de besoin \u00e0 {SCHOOL_NAME}.
-
-Cordialement,
-Andr\u00e9
-Linguistic Communication
-+33 6 75 08 12 01
-linguistic-communication.com`
+    name: 'Remplacement Urgent',
+    color: '#c62828',
+    emails: [
+      {
+        label: 'Email — Remplacement enseignant',
+        subject: 'Remplacement enseignant en derni\u00e8re minute — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <p>Bonjour,</p>
+    <p>Je contacte votre \u00e9tablissement au sujet d'un service essentiel : <strong>le remplacement d'enseignant en derni\u00e8re minute</strong>.</p>
+    <div style="background-color: #fce4ec; padding: 15px; border-left: 4px solid #c62828; margin: 20px 0;">
+        <strong>\ud83d\udea8 Un enseignant absent demain ?</strong> Linguistic Communication peut mobiliser un intervenant qualifi\u00e9 <strong>sous 24 \u00e0 48h</strong> pour assurer la continuit\u00e9 p\u00e9dagogique de vos cours.
+    </div>
+    <h3 style="color: #c62828;">Notre service de remplacement express :</h3>
+    <ul>
+        <li><strong>D\u00e9lai d'intervention :</strong> 24 \u00e0 48h \u2014 y compris en urgence le jour m\u00eame</li>
+        <li><strong>Mati\u00e8res couvertes :</strong> anglais technique, IT, management, communication, Agile/Scrum</li>
+        <li><strong>Niveaux :</strong> BTS, Bachelor, Master, MBA</li>
+        <li><strong>Intervenants qualifi\u00e9s :</strong> professionnels bilingues avec exp\u00e9rience p\u00e9dagogique</li>
+        <li><strong>Continuit\u00e9 assur\u00e9e :</strong> nous suivons votre programme et vos supports de cours</li>
+    </ul>
+    <h3 style="color: #c62828;">Fin d'ann\u00e9e = p\u00e9riode critique</h3>
+    <p>Entre les absences, les examens et les soutenances, la p\u00e9riode avril-juin est la plus tendue. Anticiper un partenaire de remplacement fiable, c'est \u00e9viter les cours annul\u00e9s.</p>
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #c62828; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Mettre en place un accord de remplacement</a>
+    </div>
+    <p>Un simple appel suffit pour mettre en place un accord-cadre.</p>
+    <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #c62828;">06 75 08 12 01</a></p>
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+</div>`
+      }
+    ]
+  },
+  'toeic': {
+    name: 'TOEIC Preparation',
+    color: '#2e7d32',
+    emails: [
+      {
+        label: 'Email — Pr\u00e9paration TOEIC',
+        subject: 'Pr\u00e9paration et administration du TOEIC — Linguistic Communication',
+        html: `<div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <p>Bonjour,</p>
+    <p>Je contacte votre \u00e9tablissement concernant la <strong>pr\u00e9paration et l'administration du TOEIC</strong> pour vos \u00e9tudiants.</p>
+    <div style="background-color: #e8f5e9; padding: 15px; border-left: 4px solid #2e7d32; margin: 20px 0;">
+        <strong>\ud83c\udf93 Rentr\u00e9e 2026-2027 :</strong> Int\u00e9grez la pr\u00e9paration TOEIC dans vos parcours BTS, Bachelor et Master. Nos intervenants sp\u00e9cialis\u00e9s accompagnent vos \u00e9tudiants jusqu'\u00e0 l'obtention du score vis\u00e9.
+    </div>
+    <h3 style="color: #2e7d32;">Notre offre TOEIC :</h3>
+    <ul>
+        <li><strong>Pr\u00e9paration intensive :</strong> modules de 20 \u00e0 40h adapt\u00e9s au niveau de vos \u00e9tudiants</li>
+        <li><strong>Tests blancs :</strong> simulations en conditions r\u00e9elles</li>
+        <li><strong>Administration du test :</strong> organisation compl\u00e8te des sessions TOEIC</li>
+        <li><strong>Suivi individualis\u00e9 :</strong> identification des points faibles et rattrapage</li>
+        <li><strong>R\u00e9sultats prouv\u00e9s :</strong> am\u00e9lioration moyenne de 150 points</li>
+    </ul>
+    <h3 style="color: #2e7d32;">Pourquoi c'est le bon moment ?</h3>
+    <p>La planification p\u00e9dagogique pour 2026-2027 se pr\u00e9pare maintenant. Int\u00e9grer le TOEIC d\u00e8s la rentr\u00e9e permet \u00e0 vos \u00e9tudiants de valider leur certification avant la fin de leur cursus.</p>
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="https://calendly.com/linguisticcommunication/coursebooking" style="background-color: #2e7d32; color: white; padding: 14px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px; display: inline-block;">Planifier le TOEIC pour vos \u00e9tudiants</a>
+    </div>
+    <p>Bien cordialement,<br><strong>Alexis Andr\u00e9 des Forges</strong><br>Directeur \u2014 Linguistic Communication<br>T\u00e9l : <a href="tel:+33675081201" style="color: #2e7d32;">06 75 08 12 01</a></p>
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666;"><div style="text-align: center; margin: 20px 0;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/LC-1-2.jpg" alt="LC" style="max-width: 150px; height: auto;"></div><p><strong>Linguistic Communication</strong><br>Paris, France</p><div style="text-align: center; margin: 20px 0; padding: 15px; background-color: #f0f0f0; border-radius: 8px;"><img src="https://linguistic-communication.com/wp-content/uploads/2025/05/Qualiopi-good-logo-300x192-1.png" alt="Qualiopi" style="max-width: 120px; height: auto;"><p style="font-size: 11px; margin-top: 10px;"><strong>Organisme de formation certifi\u00e9 Qualiopi</strong></p></div></div>
+</div>`
+      }
+    ]
   }
 };
 
-// Tab switching
+// ===================== TEMPLATE MANAGEMENT =====================
+function getTemplates() {
+  const saved = localStorage.getItem('lc_templates');
+  if (saved) {
+    try { return JSON.parse(saved); } catch(e) {}
+  }
+  return JSON.parse(JSON.stringify(DEFAULT_TEMPLATES));
+}
+
+function saveTemplates(templates) {
+  localStorage.setItem('lc_templates', JSON.stringify(templates));
+}
+
+function resetAllTemplates() {
+  if (!confirm('Reset all templates to defaults? Your edits will be lost.')) return;
+  localStorage.removeItem('lc_templates');
+  renderTemplates();
+}
+
+let activeSeqTab = {};
+let activeViewMode = {};
+
+function renderTemplates() {
+  const container = document.getElementById('templateList');
+  const templates = getTemplates();
+
+  container.innerHTML = Object.entries(templates).map(([cat, tpl]) => {
+    const emailCount = tpl.emails.length;
+    const seqBadge = emailCount > 1 ? `<span class="seq-badge">${emailCount}-step sequence</span>` : `<span class="seq-badge">Single email</span>`;
+    if (!activeSeqTab[cat]) activeSeqTab[cat] = 0;
+    if (!activeViewMode[cat]) activeViewMode[cat] = 'preview';
+
+    const seqTabs = emailCount > 1 ? `<div class="tpl-sequence-tabs">
+      ${tpl.emails.map((em, i) => `<div class="tpl-seq-tab ${activeSeqTab[cat] === i ? 'active' : ''}" onclick="switchSeqTab('${cat}', ${i})">${em.label}</div>`).join('')}
+    </div>` : '';
+
+    const activeIdx = activeSeqTab[cat] || 0;
+    const email = tpl.emails[activeIdx];
+    const viewMode = activeViewMode[cat] || 'preview';
+
+    const editorArea = `<div class="tpl-editor-area">
+      <p style="font-size:0.85rem;color:#636e72;margin-bottom:8px;"><strong>Subject:</strong> ${email.subject}</p>
+      <div class="tpl-view-toggle">
+        <button class="tpl-view-btn ${viewMode === 'preview' ? 'active' : ''}" onclick="switchViewMode('${cat}', 'preview')">Preview</button>
+        <button class="tpl-view-btn ${viewMode === 'code' ? 'active' : ''}" onclick="switchViewMode('${cat}', 'code')">Edit HTML</button>
+      </div>
+      ${viewMode === 'preview' ?
+        `<div class="tpl-preview"><iframe id="preview-${cat}" srcdoc="${escapeAttr(email.html)}" onload="resizeIframe(this)"></iframe></div>` :
+        `<textarea class="tpl-code" id="code-${cat}" oninput="markDirty('${cat}')">${escapeHtml(email.html)}</textarea>`
+      }
+      <div class="tpl-actions">
+        <button class="btn btn-primary btn-sm" onclick="saveTemplate('${cat}')">Save Changes</button>
+        <button class="btn btn-secondary btn-sm" onclick="resetTemplate('${cat}', ${activeIdx})">Reset to Default</button>
+        <button class="btn btn-success btn-sm" onclick="copyTemplateHTML('${cat}')">Copy HTML</button>
+        <button class="btn btn-secondary btn-sm" onclick="copyTemplateText('${cat}')">Copy Plain Text</button>
+        <span class="tpl-saved-msg" id="saved-${cat}">Saved!</span>
+      </div>
+    </div>`;
+
+    return `<div class="tpl-group">
+      <div class="tpl-group-header" onclick="toggleGroup('${cat}')" style="border-left: 4px solid ${tpl.color};">
+        <h3>${tpl.name} ${seqBadge}</h3>
+        <span class="arrow" id="arrow-${cat}">\u25b6</span>
+      </div>
+      <div class="tpl-group-body" id="body-${cat}">
+        ${seqTabs}
+        ${editorArea}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function escapeAttr(str) {
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function resizeIframe(iframe) {
+  try {
+    iframe.style.height = (iframe.contentDocument.body.scrollHeight + 40) + 'px';
+  } catch(e) {}
+}
+
+function toggleGroup(cat) {
+  const body = document.getElementById('body-' + cat);
+  const arrow = document.getElementById('arrow-' + cat);
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+function switchSeqTab(cat, idx) {
+  activeSeqTab[cat] = idx;
+  renderTemplates();
+  document.getElementById('body-' + cat).classList.add('open');
+  document.getElementById('arrow-' + cat).classList.add('open');
+}
+
+function switchViewMode(cat, mode) {
+  if (mode === 'code' && activeViewMode[cat] === 'preview') {
+    activeViewMode[cat] = 'code';
+  } else if (mode === 'preview' && activeViewMode[cat] === 'code') {
+    const codeEl = document.getElementById('code-' + cat);
+    if (codeEl) {
+      const templates = getTemplates();
+      const idx = activeSeqTab[cat] || 0;
+      templates[cat].emails[idx].html = codeEl.value;
+      saveTemplates(templates);
+    }
+    activeViewMode[cat] = 'preview';
+  }
+  renderTemplates();
+  document.getElementById('body-' + cat).classList.add('open');
+  document.getElementById('arrow-' + cat).classList.add('open');
+}
+
+function markDirty(cat) {}
+
+function saveTemplate(cat) {
+  const codeEl = document.getElementById('code-' + cat);
+  if (codeEl) {
+    const templates = getTemplates();
+    const idx = activeSeqTab[cat] || 0;
+    templates[cat].emails[idx].html = codeEl.value;
+    saveTemplates(templates);
+  }
+  const msg = document.getElementById('saved-' + cat);
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 2000);
+}
+
+function resetTemplate(cat, idx) {
+  if (!confirm('Reset this email to the default template?')) return;
+  const templates = getTemplates();
+  const def = JSON.parse(JSON.stringify(DEFAULT_TEMPLATES));
+  templates[cat].emails[idx] = def[cat].emails[idx];
+  saveTemplates(templates);
+  renderTemplates();
+  document.getElementById('body-' + cat).classList.add('open');
+  document.getElementById('arrow-' + cat).classList.add('open');
+}
+
+function copyTemplateHTML(cat) {
+  const templates = getTemplates();
+  const idx = activeSeqTab[cat] || 0;
+  const html = templates[cat].emails[idx].html;
+  navigator.clipboard.writeText(html).then(() => alert('HTML copied!')).catch(() => alert('Could not copy.'));
+}
+
+function copyTemplateText(cat) {
+  const templates = getTemplates();
+  const idx = activeSeqTab[cat] || 0;
+  const html = templates[cat].emails[idx].html;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  navigator.clipboard.writeText(tmp.textContent || tmp.innerText).then(() => alert('Plain text copied!')).catch(() => alert('Could not copy.'));
+}
+
+function substituteVars(html, lead) {
+  return html
+    .replace(/\{\{\s*contact\.firstname\s+or\s+'[^']*'\s*\}\}/g, lead.decisionMakers[0] || 'Madame, Monsieur')
+    .replace(/\{\{\s*contact\.firstname\s*\}\}/g, lead.decisionMakers[0] || 'Madame, Monsieur')
+    .replace(/\{\{\s*contact\.company\s*\}\}/g, lead.name)
+    .replace(/\{\{\s*from_email\s*\}\}/g, 'contact@linguistic-communication.com');
+}
+
+// ===================== TAB SWITCHING =====================
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -788,7 +980,6 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-// Category chips
 document.querySelectorAll('.cat-chip').forEach(chip => {
   chip.addEventListener('click', () => chip.classList.toggle('active'));
 });
@@ -797,6 +988,7 @@ function getSelectedCategories() {
   return Array.from(document.querySelectorAll('.cat-chip.active')).map(c => c.dataset.cat);
 }
 
+// ===================== LEAD PARSING & ENRICHMENT =====================
 function extractDomain(url) {
   if (!url) return null;
   try {
@@ -808,12 +1000,7 @@ function extractDomain(url) {
 
 function deriveEmails(domain) {
   if (!domain) return [];
-  return [
-    'contact@' + domain,
-    'info@' + domain,
-    'direction@' + domain,
-    'formation@' + domain
-  ];
+  return ['contact@' + domain, 'info@' + domain, 'direction@' + domain, 'formation@' + domain];
 }
 
 function suggestDecisionMakers(schoolType) {
@@ -832,175 +1019,98 @@ function matchCategories(schoolType, selectedCats) {
       cats.forEach(c => { if (selectedCats.includes(c) && !matched.includes(c)) matched.push(c); });
     }
   }
-  if (matched.length === 0) return selectedCats.slice(0, 2);
-  return matched;
+  return matched.length === 0 ? selectedCats.slice(0, 2) : matched;
 }
 
 function parseLeads(raw) {
   const lines = raw.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   const parsed = [];
   let i = 0;
-
   while (i < lines.length) {
     if (!/^ChIJ|^[A-Za-z0-9_-]{20,}/.test(lines[i])) { i++; continue; }
-
-    const lead = { placeId: '', name: '', address: '', phone: '', website: '', rating: 0, reviews: 0, type: '', lat: 0, lng: 0, city: '', country: '', query: '', timestamp: '' };
+    const lead = { placeId:'', name:'', address:'', phone:'', website:'', rating:0, reviews:0, type:'', lat:0, lng:0, city:'', country:'', query:'', timestamp:'' };
     lead.placeId = lines[i]; i++;
     if (i < lines.length) { lead.name = lines[i]; i++; }
     if (i < lines.length && /\d/.test(lines[i]) && /France|paris/i.test(lines[i])) { lead.address = lines[i]; i++; }
     if (i < lines.length && /^\+?\d/.test(lines[i]) && lines[i].includes(' ')) { lead.phone = lines[i]; i++; }
-    if (i < lines.length && /https?:\/\/|www\./i.test(lines[i])) {
-      let url = lines[i];
-      url = url.replace(/(https?:\/\/[^\s]+?)(https?:\/\/)/, '$1');
-      lead.website = url;
-      i++;
-    }
+    if (i < lines.length && /https?:\/\/|www\./i.test(lines[i])) { lead.website = lines[i].replace(/(https?:\/\/[^\s]+?)(https?:\/\/)/, '$1'); i++; }
     if (i < lines.length && /^\d+\.?\d*$/.test(lines[i])) { lead.rating = parseFloat(lines[i]); i++; }
     if (i < lines.length && /^\d+$/.test(lines[i])) { lead.reviews = parseInt(lines[i]); i++; }
     if (i < lines.length && !/^ChIJ|^\d+\.\d{4,}|^\d{4}-/.test(lines[i])) { lead.type = lines[i]; i++; }
-    if (i < lines.length && /^\d+\.\d{4,}/.test(lines[i])) {
-      const coords = lines[i];
-      const match = coords.match(/(\d+\.\d+)\s*(\d+\.\d+)/);
-      if (match) { lead.lat = parseFloat(match[1]); lead.lng = parseFloat(match[2]); }
-      i++;
-    }
+    if (i < lines.length && /^\d+\.\d{4,}/.test(lines[i])) { const m = lines[i].match(/(\d+\.\d+)\s*(\d+\.\d+)/); if(m){lead.lat=parseFloat(m[1]);lead.lng=parseFloat(m[2]);} i++; }
     if (i < lines.length && /^[A-Z][a-z]+$/.test(lines[i])) { lead.city = lines[i]; i++; }
     if (i < lines.length && /^[A-Z][a-z]+$/.test(lines[i])) { lead.country = lines[i]; i++; }
     if (i < lines.length && !/^\d{4}-|^ChIJ/.test(lines[i])) { lead.query = lines[i]; i++; }
     if (i < lines.length && /^\d{4}-\d{2}-\d{2}/.test(lines[i])) { lead.timestamp = lines[i]; i++; }
-
     if (lead.name) parsed.push(lead);
   }
   return parsed;
 }
 
 function parseCompactLeads(raw) {
-  const leads = [];
+  const result = [];
   const placeIdPattern = /ChIJ[A-Za-z0-9_-]+/g;
   let matches = [...raw.matchAll(placeIdPattern)];
-
   if (matches.length === 0) return parseLeads(raw);
-
   for (let m = 0; m < matches.length; m++) {
     const start = matches[m].index;
-    const end = m + 1 < matches.length ? matches[m + 1].index : raw.length;
+    const end = m+1 < matches.length ? matches[m+1].index : raw.length;
     const block = raw.substring(start, end).trim();
-
-    const lead = { placeId: '', name: '', address: '', phone: '', website: '', rating: 0, reviews: 0, type: '', lat: 0, lng: 0, city: '', country: '', query: '', timestamp: '' };
-
+    const lead = { placeId:'', name:'', address:'', phone:'', website:'', rating:0, reviews:0, type:'', lat:0, lng:0, city:'', country:'', query:'', timestamp:'' };
     lead.placeId = matches[m][0];
-
     let rest = block.substring(lead.placeId.length);
-
-    const phoneMatch = rest.match(/(\+\d[\d\s]{8,})/);
-    if (phoneMatch) lead.phone = phoneMatch[1].trim();
-
-    const urlMatch = rest.match(/(https?:\/\/[^\s\]]+)/);
-    if (urlMatch) {
-      let url = urlMatch[1];
-      url = url.replace(/(https?:\/\/[^/]+\/[^\s]*)https?:\/\/.*/, '$1');
-      lead.website = url;
-    }
-
-    const ratingMatch = rest.match(/(\d\.\d)\s*(\d+)\s*\n/);
-    if (ratingMatch) {
-      lead.rating = parseFloat(ratingMatch[1]);
-      lead.reviews = parseInt(ratingMatch[2]);
-    }
-
-    const typePatterns = ['Computer training school', 'Graduate school', 'Private educational institution', 'Vocational school', 'Senior high school', 'High school', 'University', 'Business school'];
-    for (const tp of typePatterns) {
-      if (rest.includes(tp)) { lead.type = tp; break; }
-    }
-
-    const coordMatch = rest.match(/(\d{2}\.\d{4,})\s*(\d+\.\d{4,})/);
-    if (coordMatch) {
-      lead.lat = parseFloat(coordMatch[1]);
-      lead.lng = parseFloat(coordMatch[2]);
-    }
-
-    const cityMatch = rest.match(/(\d+\.\d+)\s*([A-Z][a-z]+)\s*([A-Z][a-z]+)/);
-    if (cityMatch) {
-      lead.city = cityMatch[2];
-      lead.country = cityMatch[3];
-    }
-
-    const tsMatch = rest.match(/\d{4}-\d{2}-\d{2}T[\d:.]+Z/);
-    if (tsMatch) lead.timestamp = tsMatch[0];
-
-    const queryMatch = rest.match(/([A-Z][A-Za-z\s]+(?:in\s+[A-Za-z,\s]+))/);
-    if (queryMatch) lead.query = queryMatch[1].trim();
-
+    const phoneMatch = rest.match(/(\+\d[\d\s]{8,})/); if(phoneMatch) lead.phone = phoneMatch[1].trim();
+    const urlMatch = rest.match(/(https?:\/\/[^\s\]]+)/); if(urlMatch) lead.website = urlMatch[1].replace(/(https?:\/\/[^/]+\/[^\s]*)https?:\/\/.*/, '$1');
+    const ratingMatch = rest.match(/(\d\.\d)\s*(\d+)\s*\n/); if(ratingMatch){lead.rating=parseFloat(ratingMatch[1]);lead.reviews=parseInt(ratingMatch[2]);}
+    const typePatterns = ['Computer training school','Graduate school','Private educational institution','Vocational school','Senior high school','High school','University','Business school'];
+    for (const tp of typePatterns) { if(rest.includes(tp)){lead.type=tp;break;} }
+    const coordMatch = rest.match(/(\d{2}\.\d{4,})\s*(\d+\.\d{4,})/); if(coordMatch){lead.lat=parseFloat(coordMatch[1]);lead.lng=parseFloat(coordMatch[2]);}
+    const cityMatch = rest.match(/(\d+\.\d+)\s*([A-Z][a-z]+)\s*([A-Z][a-z]+)/); if(cityMatch){lead.city=cityMatch[2];lead.country=cityMatch[3];}
+    const tsMatch = rest.match(/\d{4}-\d{2}-\d{2}T[\d:.]+Z/); if(tsMatch) lead.timestamp = tsMatch[0];
     const afterPlaceId = rest.replace(/^\s*/, '');
     const nameEnd = afterPlaceId.search(/\d|https?:\/\/|\+33/);
     if (nameEnd > 0) {
       let nameAddr = afterPlaceId.substring(0, nameEnd).trim();
       const addrMatch = nameAddr.match(/(\d+[\s\-].*(?:Paris|France|Rue|Bd|Imp|Avenue).*)$/i);
-      if (addrMatch) {
-        lead.address = addrMatch[1].trim();
-        lead.name = nameAddr.substring(0, nameAddr.indexOf(addrMatch[1])).trim();
-      } else {
-        lead.name = nameAddr;
-      }
+      if(addrMatch){lead.address=addrMatch[1].trim();lead.name=nameAddr.substring(0,nameAddr.indexOf(addrMatch[1])).trim();}
+      else lead.name = nameAddr;
     }
-
-    if (lead.name) leads.push(lead);
+    if (lead.name) result.push(lead);
   }
-
-  return leads;
+  return result;
 }
 
 function enrichLead(lead, selectedCats) {
-  const enriched = { ...lead, emails: [], decisionMakers: [], categories: [], status: 'new', selected: false };
-
+  const enriched = { ...lead, emails:[], decisionMakers:[], categories:[], status:'new', selected:false };
   if (document.getElementById('optEmails').checked) {
     const domain = extractDomain(lead.website);
-    if (domain) {
-      enriched.emails = deriveEmails(domain);
-      enriched.status = 'enriched';
-    }
+    if (domain) { enriched.emails = deriveEmails(domain); enriched.status = 'enriched'; }
   }
-
-  if (document.getElementById('optDecisionMakers').checked) {
-    enriched.decisionMakers = suggestDecisionMakers(lead.type);
-  }
-
+  if (document.getElementById('optDecisionMakers').checked) enriched.decisionMakers = suggestDecisionMakers(lead.type);
   enriched.categories = matchCategories(lead.type, selectedCats);
-
   return enriched;
 }
 
 function parseAndEnrich() {
   const raw = document.getElementById('rawLeads').value;
   if (!raw.trim()) { alert('Please paste your lead data first.'); return; }
-
   const selectedCats = getSelectedCategories();
   if (selectedCats.length === 0) { alert('Please select at least one category.'); return; }
-
   let parsed = parseCompactLeads(raw);
   if (parsed.length === 0) parsed = parseLeads(raw);
-
-  if (parsed.length === 0) {
-    alert('Could not parse any leads. Please check the data format.');
-    return;
-  }
-
+  if (parsed.length === 0) { alert('Could not parse any leads.'); return; }
   leads = parsed.map(l => enrichLead(l, selectedCats));
   currentPage = 1;
-
-  updateStats();
-  renderTable();
-  renderTemplates();
-
+  updateStats(); renderTable(); renderTemplates();
   document.querySelector('[data-tab="leads"]').click();
 }
 
+// ===================== TABLE / STATS =====================
 function updateStats() {
   document.getElementById('statTotal').textContent = leads.length;
   document.getElementById('statEnriched').textContent = leads.filter(l => l.status === 'enriched').length;
   document.getElementById('statEmails').textContent = leads.reduce((acc, l) => acc + l.emails.length, 0);
-  const allCats = new Set();
-  leads.forEach(l => l.categories.forEach(c => allCats.add(c)));
+  const allCats = new Set(); leads.forEach(l => l.categories.forEach(c => allCats.add(c)));
   document.getElementById('statCategories').textContent = allCats.size;
 }
 
@@ -1011,195 +1121,116 @@ function renderTable() {
   const search = document.getElementById('searchInput').value.toLowerCase();
   const statusFilter = document.getElementById('filterStatus').value;
   const catFilter = document.getElementById('filterCategory').value;
-
   let filtered = leads.filter(l => {
     if (search && !l.name.toLowerCase().includes(search) && !l.emails.join(' ').toLowerCase().includes(search) && !l.city.toLowerCase().includes(search)) return false;
     if (statusFilter && l.status !== statusFilter) return false;
     if (catFilter && !l.categories.includes(catFilter)) return false;
     return true;
   });
-
   if (filtered.length === 0) {
     tbody.innerHTML = '';
-    empty.style.display = leads.length === 0 ? 'block' : 'block';
+    empty.style.display = 'block';
     empty.querySelector('p').textContent = leads.length === 0 ? 'Go to the Import tab to paste and parse your n8n leads' : 'No leads match your filters';
-    pag.style.display = 'none';
-    return;
+    pag.style.display = 'none'; return;
   }
-
   empty.style.display = 'none';
-
   const totalPages = Math.ceil(filtered.length / perPage);
   if (currentPage > totalPages) currentPage = totalPages;
   const start = (currentPage - 1) * perPage;
   const pageLeads = filtered.slice(start, start + perPage);
-
-  tbody.innerHTML = pageLeads.map((l, idx) => {
-    const globalIdx = leads.indexOf(l);
-    const emailHtml = l.emails.length > 0
-      ? l.emails.slice(0, 2).map(e => `<a class="email-link" href="mailto:${e}">${e}</a>`).join('<br>') + (l.emails.length > 2 ? `<br><span style="color:#b2bec3;font-size:0.75rem;">+${l.emails.length - 2} more</span>` : '')
-      : '<span style="color:#b2bec3;">--</span>';
-    const phoneHtml = l.phone ? `<a class="phone-link" href="tel:${l.phone}">${l.phone}</a>` : '--';
-    const websiteHtml = l.website ? `<a class="website-link" href="${l.website}" target="_blank">${extractDomain(l.website) || l.website}</a>` : '--';
-    const ratingHtml = l.rating ? `<span class="rating">${'\u2605'.repeat(Math.round(l.rating))}</span> ${l.rating} (${l.reviews})` : '--';
-    const statusHtml = `<span class="badge badge-${l.status}">${l.status}</span>`;
-    const catHtml = `<div class="cat-tags">${l.categories.map(c => `<span class="cat-tag">${CATEGORIES[c] || c}</span>`).join('')}</div>`;
-    const dmHtml = l.decisionMakers.length > 0 ? `<span class="decision-maker">${l.decisionMakers[0]}</span>` : '--';
-
+  tbody.innerHTML = pageLeads.map(l => {
+    const gi = leads.indexOf(l);
+    const emailH = l.emails.length > 0 ? l.emails.slice(0,2).map(e => `<a class="email-link" href="mailto:${e}">${e}</a>`).join('<br>') + (l.emails.length > 2 ? `<br><span style="color:#b2bec3;font-size:0.75rem;">+${l.emails.length-2} more</span>` : '') : '<span style="color:#b2bec3;">--</span>';
     return `<tr>
-      <td><input type="checkbox" ${l.selected ? 'checked' : ''} onchange="toggleSelect(${globalIdx})"></td>
-      <td><strong>${l.name}</strong><br><span style="font-size:0.75rem;color:#636e72;">${l.address || l.city || ''}</span></td>
-      <td>${emailHtml}</td>
-      <td>${phoneHtml}</td>
-      <td>${websiteHtml}</td>
-      <td>${l.type || '--'}</td>
-      <td>${ratingHtml}</td>
-      <td>${statusHtml}</td>
-      <td>${catHtml}</td>
-      <td>${dmHtml}</td>
-      <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem;" onclick="showEmailForLead(${globalIdx})">Email</button></td>
+      <td><input type="checkbox" ${l.selected?'checked':''} onchange="toggleSelect(${gi})"></td>
+      <td><strong>${l.name}</strong><br><span style="font-size:0.75rem;color:#636e72;">${l.address||l.city||''}</span></td>
+      <td>${emailH}</td>
+      <td>${l.phone?`<a class="phone-link" href="tel:${l.phone}">${l.phone}</a>`:'--'}</td>
+      <td>${l.website?`<a class="website-link" href="${l.website}" target="_blank">${extractDomain(l.website)||l.website}</a>`:'--'}</td>
+      <td>${l.type||'--'}</td>
+      <td>${l.rating?`<span class="rating">${'\u2605'.repeat(Math.round(l.rating))}</span> ${l.rating} (${l.reviews})`:'--'}</td>
+      <td><span class="badge badge-${l.status}">${l.status}</span></td>
+      <td><div class="cat-tags">${l.categories.map(c=>`<span class="cat-tag">${CATEGORIES[c]||c}</span>`).join('')}</div></td>
+      <td>${l.decisionMakers.length>0?`<span class="decision-maker">${l.decisionMakers[0]}</span>`:'--'}</td>
+      <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem;" onclick="showEmailForLead(${gi})">Email</button></td>
     </tr>`;
   }).join('');
-
   pag.style.display = 'flex';
-  document.getElementById('pageInfo').textContent = `${start + 1}-${Math.min(start + perPage, filtered.length)} of ${filtered.length} leads`;
+  document.getElementById('pageInfo').textContent = `${start+1}-${Math.min(start+perPage,filtered.length)} of ${filtered.length} leads`;
   document.getElementById('prevBtn').disabled = currentPage <= 1;
   document.getElementById('nextBtn').disabled = currentPage >= totalPages;
 }
 
-function changePage(dir) {
-  currentPage += dir;
-  renderTable();
-}
-
+function changePage(dir) { currentPage += dir; renderTable(); }
 function toggleSelect(idx) { leads[idx].selected = !leads[idx].selected; }
-function toggleSelectAll() {
-  const checked = document.getElementById('selectAll').checked;
-  leads.forEach(l => l.selected = checked);
-  renderTable();
-}
+function toggleSelectAll() { const c = document.getElementById('selectAll').checked; leads.forEach(l=>l.selected=c); renderTable(); }
 
+// ===================== EMAIL MODAL =====================
 function showEmailForLead(idx) {
   const lead = leads[idx];
   const cat = lead.categories[0] || 'bts-bachelor';
-  const template = EMAIL_TEMPLATES[cat];
-  if (!template) return;
-
-  const body = template.body
-    .replace(/\{SCHOOL_NAME\}/g, lead.name)
-    .replace(/\{DECISION_MAKER\}/g, lead.decisionMakers[0] || 'Madame, Monsieur');
-
-  document.getElementById('modalTitle').textContent = `Email: ${template.subject.replace(/\{SCHOOL_NAME\}/g, lead.name)}`;
-  document.getElementById('modalContent').textContent = body;
+  const templates = getTemplates();
+  const tpl = templates[cat];
+  if (!tpl) return;
+  const html = substituteVars(tpl.emails[0].html, lead);
+  document.getElementById('modalTitle').textContent = `Email for ${lead.name}`;
+  document.getElementById('modalPreview').innerHTML = html;
   document.getElementById('emailModal').classList.add('active');
+  document.getElementById('emailModal')._currentHTML = html;
 }
 
 function generateAllEmails() {
   const selected = leads.filter(l => l.selected);
-  if (selected.length === 0) { alert('Please select leads first using the checkboxes.'); return; }
-
-  let allEmails = '';
+  if (selected.length === 0) { alert('Please select leads first.'); return; }
+  const templates = getTemplates();
+  let allHTML = '';
   selected.forEach(lead => {
-    lead.categories.forEach(cat => {
-      const template = EMAIL_TEMPLATES[cat];
-      if (!template) return;
-      const body = template.body
-        .replace(/\{SCHOOL_NAME\}/g, lead.name)
-        .replace(/\{DECISION_MAKER\}/g, lead.decisionMakers[0] || 'Madame, Monsieur');
-      allEmails += `--- ${lead.name} (${CATEGORIES[cat]}) ---\nTo: ${lead.emails[0] || 'N/A'}\nSubject: ${template.subject.replace(/\{SCHOOL_NAME\}/g, lead.name)}\n\n${body}\n\n\n`;
-    });
+    const cat = lead.categories[0] || 'bts-bachelor';
+    const tpl = templates[cat];
+    if (!tpl) return;
+    const html = substituteVars(tpl.emails[0].html, lead);
+    allHTML += `<div style="border:2px solid #e8e8e8;border-radius:8px;padding:16px;margin-bottom:16px;">
+      <p style="font-weight:bold;color:#0984e3;margin-bottom:8px;">To: ${lead.emails[0]||'N/A'} | ${lead.name} (${CATEGORIES[cat]})</p>
+      ${html}
+    </div>`;
   });
-
   document.getElementById('modalTitle').textContent = `Outreach Emails (${selected.length} leads)`;
-  document.getElementById('modalContent').textContent = allEmails;
+  document.getElementById('modalPreview').innerHTML = allHTML;
   document.getElementById('emailModal').classList.add('active');
+  document.getElementById('emailModal')._currentHTML = allHTML;
 }
 
 function closeModal() { document.getElementById('emailModal').classList.remove('active'); }
-
-function copyModalContent() {
-  const text = document.getElementById('modalContent').textContent;
-  navigator.clipboard.writeText(text).then(() => alert('Copied to clipboard!')).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    alert('Copied to clipboard!');
-  });
+function copyModalHTML() {
+  const html = document.getElementById('emailModal')._currentHTML || document.getElementById('modalPreview').innerHTML;
+  navigator.clipboard.writeText(html).then(()=>alert('HTML copied!')).catch(()=>alert('Could not copy.'));
+}
+function copyModalText() {
+  const text = document.getElementById('modalPreview').textContent;
+  navigator.clipboard.writeText(text).then(()=>alert('Text copied!')).catch(()=>alert('Could not copy.'));
 }
 
+// ===================== EXPORT =====================
 function exportCSV() {
-  if (leads.length === 0) { alert('No leads to export.'); return; }
-  const headers = ['Name', 'Email 1', 'Email 2', 'Phone', 'Website', 'Address', 'Type', 'Rating', 'Reviews', 'City', 'Country', 'Categories', 'Decision Maker', 'Status', 'Place ID'];
-  const rows = leads.map(l => [
-    l.name, l.emails[0] || '', l.emails[1] || '', l.phone, l.website, l.address, l.type,
-    l.rating, l.reviews, l.city, l.country,
-    l.categories.map(c => CATEGORIES[c]).join('; '),
-    l.decisionMakers[0] || '', l.status, l.placeId
-  ]);
-
-  let csv = headers.join(',') + '\n';
-  rows.forEach(row => {
-    csv += row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',') + '\n';
-  });
-
-  downloadFile(csv, 'leads-enriched.csv', 'text/csv');
+  if (leads.length === 0) { alert('No leads.'); return; }
+  const h = ['Name','Email 1','Email 2','Phone','Website','Address','Type','Rating','Reviews','City','Country','Categories','Decision Maker','Status','Place ID'];
+  const rows = leads.map(l=>[l.name,l.emails[0]||'',l.emails[1]||'',l.phone,l.website,l.address,l.type,l.rating,l.reviews,l.city,l.country,l.categories.map(c=>CATEGORIES[c]).join('; '),l.decisionMakers[0]||'',l.status,l.placeId]);
+  let csv = h.join(',')+'\n'; rows.forEach(r=>{csv+=r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')+'\n';});
+  downloadFile(csv,'leads-enriched.csv','text/csv');
 }
-
 function exportHubSpot() {
-  if (leads.length === 0) { alert('No leads to export.'); return; }
-  const headers = ['First Name', 'Last Name', 'Email', 'Phone Number', 'Company Name', 'Website', 'City', 'Country', 'Lead Status', 'Notes'];
-  const rows = leads.map(l => [
-    l.name, '', l.emails[0] || '', l.phone, l.name, l.website, l.city, l.country,
-    l.status === 'enriched' ? 'NEW' : 'UNQUALIFIED',
-    `Type: ${l.type}. Categories: ${l.categories.map(c => CATEGORIES[c]).join(', ')}. Decision maker: ${l.decisionMakers[0] || 'N/A'}.`
-  ]);
-
-  let csv = headers.join(',') + '\n';
-  rows.forEach(row => {
-    csv += row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',') + '\n';
-  });
-
-  downloadFile(csv, 'leads-hubspot-import.csv', 'text/csv');
+  if (leads.length === 0) { alert('No leads.'); return; }
+  const h = ['First Name','Last Name','Email','Phone Number','Company Name','Website','City','Country','Lead Status','Notes'];
+  const rows = leads.map(l=>[l.name,'',l.emails[0]||'',l.phone,l.name,l.website,l.city,l.country,l.status==='enriched'?'NEW':'UNQUALIFIED',`Type: ${l.type}. Categories: ${l.categories.map(c=>CATEGORIES[c]).join(', ')}. Decision maker: ${l.decisionMakers[0]||'N/A'}.`]);
+  let csv = h.join(',')+'\n'; rows.forEach(r=>{csv+=r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(',')+'\n';});
+  downloadFile(csv,'leads-hubspot-import.csv','text/csv');
 }
-
 function downloadFile(content, filename, type) {
-  const blob = new Blob([content], { type });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+  const blob = new Blob([content], { type }); const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = url; a.download = filename; a.click(); URL.revokeObjectURL(url);
 }
 
-function renderTemplates() {
-  const container = document.getElementById('templateList');
-  const selectedCats = getSelectedCategories();
-
-  container.innerHTML = selectedCats.map(cat => {
-    const template = EMAIL_TEMPLATES[cat];
-    if (!template) return '';
-    return `<div class="section" style="margin-bottom:16px;">
-      <h2>${CATEGORIES[cat]}</h2>
-      <p style="font-size:0.85rem;color:#636e72;margin-bottom:8px;"><strong>Subject:</strong> ${template.subject}</p>
-      <pre style="background:#f1f3f5;padding:16px;border-radius:8px;font-size:0.85rem;white-space:pre-wrap;line-height:1.5;">${template.body}</pre>
-      <div class="btn-group">
-        <button class="btn btn-secondary" onclick="copyTemplate('${cat}')">Copy Template</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function copyTemplate(cat) {
-  const template = EMAIL_TEMPLATES[cat];
-  if (!template) return;
-  const text = `Subject: ${template.subject}\n\n${template.body}`;
-  navigator.clipboard.writeText(text).then(() => alert('Template copied!')).catch(() => alert('Could not copy.'));
-}
-
+// ===================== SAMPLE DATA =====================
 function loadSample() {
   document.getElementById('rawLeads').value = `ChIJsb-FqpFv5kcRdntFjjxAbMo
 Iris - School Sup\u00e9rieure D'informatique
@@ -1298,10 +1329,7 @@ BTS SIO private schools in Paris in Paris, France
 
 function clearAll() {
   document.getElementById('rawLeads').value = '';
-  leads = [];
-  currentPage = 1;
-  updateStats();
-  renderTable();
+  leads = []; currentPage = 1; updateStats(); renderTable();
 }
 
 // Initial render
