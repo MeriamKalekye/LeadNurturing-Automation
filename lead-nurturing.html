@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead Nurturing - Linguistic Communication</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  text-align: center;
+  padding: 30px 0 20px;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+header p {
+  color: #666;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3436;
+}
+.logos span { opacity: 0.4; }
+
+.section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #e8e8e8;
+  margin: 20px 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+textarea:focus {
+  outline: none;
+  border-color: #0984e3;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.cat-chip {
+  padding: 8px 16px;
+  border: 2px solid #dfe6e9;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  user-select: none;
+}
+.cat-chip:hover { border-color: #0984e3; }
+.cat-chip.active {
+  background: #0984e3;
+  color: #fff;
+  border-color: #0984e3;
+}
+
+.btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: #0984e3;
+  color: #fff;
+}
+.btn-primary:hover { background: #0770c2; }
+.btn-secondary {
+  background: #dfe6e9;
+  color: #2d3436;
+}
+.btn-secondary:hover { background: #b2bec3; }
+.btn-success {
+  background: #00b894;
+  color: #fff;
+}
+.btn-success:hover { background: #00a381; }
+.btn-warning {
+  background: #fdcb6e;
+  color: #2d3436;
+}
+.btn-warning:hover { background: #f0b73d; }
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0984e3;
+}
+.stat-card .label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+th {
+  background: #f1f3f5;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #dfe6e9;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f1f3f5;
+  vertical-align: top;
+}
+tr:hover td { background: #f8f9fa; }
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-new { background: #dfe6e9; color: #636e72; }
+.badge-enriched { background: #55efc4; color: #00695c; }
+
+.email-link {
+  color: #0984e3;
+  text-decoration: none;
+}
+.email-link:hover { text-decoration: underline; }
+
+.phone-link {
+  color: #2d3436;
+  text-decoration: none;
+}
+.phone-link:hover { color: #0984e3; }
+
+.website-link {
+  color: #6c5ce7;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.rating {
+  color: #fdcb6e;
+  font-weight: 600;
+}
+
+.decision-maker {
+  font-size: 0.8rem;
+  color: #636e72;
+  font-style: italic;
+}
+
+.cat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.cat-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: #e8f4fd;
+  color: #0984e3;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+.modal pre {
+  background: #f1f3f5;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.5;
+}
+.modal .close-btn {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #636e72;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.service-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 14px;
+  border-left: 4px solid #0984e3;
+}
+.service-card h4 {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+.service-card p {
+  font-size: 0.8rem;
+  color: #636e72;
+}
+
+select {
+  padding: 8px 12px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: #fff;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+}
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0984e3;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #b2bec3;
+}
+.empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
+.empty-state p { font-size: 0.95rem; }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #636e72;
+}
+.pagination button {
+  padding: 6px 16px;
+  border: 1px solid #dfe6e9;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.pagination button:hover { background: #f1f3f5; }
+.pagination button:disabled { opacity: 0.4; cursor: default; }
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.search-bar input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.search-bar input:focus {
+  outline: none;
+  border-color: #0984e3;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #636e72;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+.tab:hover { color: #2d3436; }
+.tab.active {
+  color: #0984e3;
+  border-bottom-color: #0984e3;
+}
+
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #b2bec3;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 12px; }
+  header h1 { font-size: 1.5rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logos">
+      Linguistic Communication <span>|</span> Lead Nurturing
+    </div>
+    <h1>Lead Nurturing Automation</h1>
+    <p>Parse, enrich, and nurture your n8n leads with targeted outreach</p>
+  </header>
+
+  <div class="tab-bar">
+    <div class="tab active" data-tab="import">Import Leads</div>
+    <div class="tab" data-tab="leads">All Leads</div>
+    <div class="tab" data-tab="templates">Email Templates</div>
+    <div class="tab" data-tab="services">Our Services</div>
+  </div>
+
+  <!-- IMPORT TAB -->
+  <div class="tab-content active" id="tab-import">
+    <div class="section">
+      <h2>Paste Your n8n Leads</h2>
+      <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">
+        Paste the raw output from your n8n Google Maps workflow below. Each lead block will be automatically parsed.
+      </p>
+      <textarea id="rawLeads" placeholder="Paste your n8n lead data here...&#10;&#10;Example:&#10;ChIJsb-FqpFv5kcRdntFjjxAbMo&#10;Iris - School Sup&eacute;rieure D'informatique&#10;6-8 Imp. des 2 Cousins, 75017 Paris, France&#10;+33 1 44 01 86 70&#10;https://ecoleiris.fr/&#10;4.2&#10;18&#10;Computer training school&#10;..."></textarea>
+
+      <hr>
+
+      <h2>Select Target Categories</h2>
+      <div class="categories" id="categoryChips">
+        <div class="cat-chip active" data-cat="bts-bachelor">BTS / Bachelor</div>
+        <div class="cat-chip active" data-cat="mba-masters">MBA / Masters</div>
+        <div class="cat-chip active" data-cat="agile">Agile Programs</div>
+        <div class="cat-chip active" data-cat="ai">AI Programs</div>
+        <div class="cat-chip active" data-cat="jury">Jury for Exams</div>
+        <div class="cat-chip active" data-cat="replacement">Last Minute Teacher Replacement</div>
+      </div>
+
+      <hr>
+
+      <h2>Enrichment Options</h2>
+      <div class="checkbox-row">
+        <input type="checkbox" id="optEmails" checked>
+        <label for="optEmails">Derive emails from website domains (contact@, info@, direction@, formation@)</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="optDecisionMakers" checked>
+        <label for="optDecisionMakers">Suggest decision maker roles (Directeur de formation, Responsable p&eacute;dagogique, etc.)</label>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="optServices" checked>
+        <label for="optServices">Match relevant Linguistic Communication services per lead</label>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="parseAndEnrich()">Parse &amp; Enrich Leads</button>
+        <button class="btn btn-secondary" onclick="loadSample()">Load Sample Data</button>
+        <button class="btn btn-secondary" onclick="clearAll()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADS TAB -->
+  <div class="tab-content" id="tab-leads">
+    <div class="section">
+      <div class="stats" id="statsPanel">
+        <div class="stat-card"><div class="num" id="statTotal">0</div><div class="label">Total Leads</div></div>
+        <div class="stat-card"><div class="num" id="statEnriched">0</div><div class="label">Enriched</div></div>
+        <div class="stat-card"><div class="num" id="statEmails">0</div><div class="label">Emails Found</div></div>
+        <div class="stat-card"><div class="num" id="statCategories">0</div><div class="label">Categories</div></div>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search leads by name, email, city..." oninput="renderTable()">
+        <select id="filterStatus" onchange="renderTable()">
+          <option value="">All Statuses</option>
+          <option value="new">New</option>
+          <option value="enriched">Enriched</option>
+        </select>
+        <select id="filterCategory" onchange="renderTable()">
+          <option value="">All Categories</option>
+          <option value="bts-bachelor">BTS / Bachelor</option>
+          <option value="mba-masters">MBA / Masters</option>
+          <option value="agile">Agile Programs</option>
+          <option value="ai">AI Programs</option>
+          <option value="jury">Jury for Exams</option>
+          <option value="replacement">Last Minute Replacement</option>
+        </select>
+      </div>
+
+      <div class="btn-group" style="margin-top:0;margin-bottom:16px;">
+        <button class="btn btn-success" onclick="exportCSV()">Export CSV</button>
+        <button class="btn btn-warning" onclick="generateAllEmails()">Generate Outreach Emails</button>
+        <button class="btn btn-secondary" onclick="exportHubSpot()">Export for HubSpot</button>
+      </div>
+
+      <div class="table-wrap">
+        <table id="leadsTable">
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="selectAll" onchange="toggleSelectAll()"></th>
+              <th>Name</th>
+              <th>Email(s)</th>
+              <th>Phone</th>
+              <th>Website</th>
+              <th>Type</th>
+              <th>Rating</th>
+              <th>Status</th>
+              <th>Categories</th>
+              <th>Decision Maker</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leadsBody"></tbody>
+        </table>
+      </div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="icon">No leads yet</div>
+        <p>Go to the Import tab to paste and parse your n8n leads</p>
+      </div>
+
+      <div class="pagination" id="pagination" style="display:none;">
+        <span id="pageInfo"></span>
+        <div>
+          <button onclick="changePage(-1)" id="prevBtn">Prev</button>
+          <button onclick="changePage(1)" id="nextBtn">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMAIL TEMPLATES TAB -->
+  <div class="tab-content" id="tab-templates">
+    <div class="section">
+      <h2>Outreach Email Templates</h2>
+      <p style="font-size:0.85rem;color:#666;margin-bottom:16px;">
+        Pre-built email templates for each service category. Click to customize and copy.
+      </p>
+
+      <div id="templateList"></div>
+    </div>
+  </div>
+
+  <!-- SERVICES TAB -->
+  <div class="tab-content" id="tab-services">
+    <div class="section">
+      <h2>Linguistic Communication Services</h2>
+      <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">
+        Services matched to leads based on school type and selected categories.
+      </p>
+      <div class="service-grid">
+        <div class="service-card">
+          <h4>BTS / Bachelor Programs</h4>
+          <p>Specialized IT &amp; management instructors for BTS SIO, BTS NDRC, Bachelor programs. Technologies Num&eacute;riques, Python, databases, cloud, cybersecurity.</p>
+        </div>
+        <div class="service-card">
+          <h4>MBA / Masters Programs</h4>
+          <p>IT project management, cloud computing, cybersecurity, AI modules. Strategic marketing, business intelligence, enterprise strategy.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#00b894;">
+          <h4>Agile Training Programs</h4>
+          <p>SCRUM, Kanban, DevOps, Lean Startup, Design Thinking. Certified trainers for academic programs.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#6c5ce7;">
+          <h4>AI &amp; Digital Programs</h4>
+          <p>Artificial Intelligence, Machine Learning, GenAI automation. AI Agents deployment and training modules.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#fdcb6e;">
+          <h4>Jury for Exams</h4>
+          <p>Professional jury members for BTS, Bachelor, and Master certification exams. Experienced industry professionals.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#e17055;">
+          <h4>Last Minute Teacher Replacement</h4>
+          <p>Express teaching interventions. Qualified substitute instructors available on short notice for IT, management, and English courses.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#00cec9;">
+          <h4>TOEIC Preparation</h4>
+          <p>TOEIC administration and preparation programs. Standardized English testing for academic institutions.</p>
+        </div>
+        <div class="service-card" style="border-left-color:#e84393;">
+          <h4>AI Agents &amp; Automation</h4>
+          <p>Deploy reliable AI agents for daily operations. Social media automation, workflow optimization, GenAI solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Linguistic Communication &mdash; Lead Nurturing Automation &mdash; linguistic-communication.com
+  </footer>
+</div>
+
+<!-- EMAIL MODAL -->
+<div class="modal-overlay" id="emailModal">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <h3 id="modalTitle">Email Template</h3>
+    <pre id="modalContent"></pre>
+    <div class="btn-group" style="margin-top:16px;">
+      <button class="btn btn-primary" onclick="copyModalContent()">Copy to Clipboard</button>
+      <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let leads = [];
+let currentPage = 1;
+const perPage = 25;
+
+const CATEGORIES = {
+  'bts-bachelor': 'BTS / Bachelor',
+  'mba-masters': 'MBA / Masters',
+  'agile': 'Agile Programs',
+  'ai': 'AI Programs',
+  'jury': 'Jury for Exams',
+  'replacement': 'Last Minute Replacement'
+};
+
+const DECISION_MAKERS = [
+  'Directeur/Directrice de formation',
+  'Responsable p\u00e9dagogique',
+  'Directeur/Directrice des \u00e9tudes',
+  'Responsable des partenariats',
+  'Directeur/Directrice g\u00e9n\u00e9ral(e)',
+  'Responsable acad\u00e9mique'
+];
+
+const SCHOOL_TYPE_TO_ROLES = {
+  'computer training school': ['Directeur/Directrice de formation', 'Responsable p\u00e9dagogique'],
+  'graduate school': ['Directeur/Directrice des \u00e9tudes', 'Responsable des partenariats'],
+  'private educational institution': ['Directeur/Directrice g\u00e9n\u00e9ral(e)', 'Responsable p\u00e9dagogique'],
+  'vocational school': ['Directeur/Directrice de formation', 'Responsable acad\u00e9mique'],
+  'senior high school': ['Proviseur', 'Responsable p\u00e9dagogique'],
+  'high school': ['Proviseur', 'Responsable p\u00e9dagogique']
+};
+
+const SCHOOL_TYPE_TO_CATEGORIES = {
+  'computer training school': ['bts-bachelor', 'ai', 'agile'],
+  'graduate school': ['mba-masters', 'ai', 'agile'],
+  'private educational institution': ['bts-bachelor', 'mba-masters', 'jury'],
+  'vocational school': ['bts-bachelor', 'replacement', 'jury'],
+  'senior high school': ['bts-bachelor', 'jury', 'replacement'],
+  'high school': ['bts-bachelor', 'jury', 'replacement']
+};
+
+const EMAIL_TEMPLATES = {
+  'bts-bachelor': {
+    subject: 'Partenariat enseignement BTS/Bachelor - Linguistic Communication',
+    body: `Bonjour {DECISION_MAKER},
+
+Je me permets de vous contacter au nom de Linguistic Communication, sp\u00e9cialiste en enseignement IT, Management et Communication pour les \u00e9tablissements d'enseignement sup\u00e9rieur.
+
+Nous proposons des intervenants sp\u00e9cialis\u00e9s pour vos programmes BTS SIO, BTS NDRC et Bachelor dans les domaines suivants :
+- Technologies Num\u00e9riques (Python, bases de donn\u00e9es, cloud, cybers\u00e9curit\u00e9)
+- Management et Marketing Digital
+- Communication professionnelle
+- Pr\u00e9paration TOEIC
+
+Nous serions ravis d'\u00e9changer sur la possibilit\u00e9 d'int\u00e9grer nos programmes \u00e0 votre \u00e9tablissement {SCHOOL_NAME}.
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  },
+  'mba-masters': {
+    subject: 'Intervenants MBA/Masters - Linguistic Communication',
+    body: `Bonjour {DECISION_MAKER},
+
+Linguistic Communication propose des modules d'enseignement sp\u00e9cialis\u00e9s pour les programmes MBA et Masters :
+- Management de projets IT et Cloud Computing
+- Cybers\u00e9curit\u00e9 et Intelligence Artificielle
+- Strat\u00e9gie d'entreprise et Business Intelligence
+- Marketing strat\u00e9gique et CRM
+
+Nos intervenants sont des professionnels exp\u00e9riment\u00e9s, capables de transmettre une expertise concr\u00e8te \u00e0 vos \u00e9tudiants de {SCHOOL_NAME}.
+
+Seriez-vous disponible pour un \u00e9change la semaine prochaine ?
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  },
+  'agile': {
+    subject: 'Formations Agiles pour votre \u00e9tablissement - Linguistic Communication',
+    body: `Bonjour {DECISION_MAKER},
+
+Nous proposons des formations certifiantes en m\u00e9thodologies Agiles :
+- SCRUM (Product Owner, Scrum Master)
+- Kanban et Lean Management
+- DevOps et int\u00e9gration continue
+- Design Thinking et Lean Startup
+
+Ces modules peuvent \u00eatre int\u00e9gr\u00e9s \u00e0 vos cursus existants \u00e0 {SCHOOL_NAME} pour renforcer l'employabilit\u00e9 de vos dipl\u00f4m\u00e9s.
+
+Pouvons-nous convenir d'un rendez-vous ?
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  },
+  'ai': {
+    subject: 'Programmes IA & GenAI pour {SCHOOL_NAME}',
+    body: `Bonjour {DECISION_MAKER},
+
+L'Intelligence Artificielle transforme le march\u00e9 du travail. Linguistic Communication propose des modules sp\u00e9cialis\u00e9s :
+- Intelligence Artificielle et Machine Learning
+- GenAI et Agents IA (d\u00e9ploiement et automatisation)
+- Python pour la Data Science
+- Automatisation des processus par IA
+
+Nous accompagnons les \u00e9tablissements comme {SCHOOL_NAME} dans l'int\u00e9gration de ces comp\u00e9tences cl\u00e9s dans leurs programmes.
+
+Seriez-vous int\u00e9ress\u00e9(e) par une pr\u00e9sentation de nos modules ?
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  },
+  'jury': {
+    subject: 'Membres de jury professionnel - Linguistic Communication',
+    body: `Bonjour {DECISION_MAKER},
+
+Linguistic Communication met \u00e0 votre disposition des membres de jury professionnels pour vos examens de certification BTS, Bachelor et Masters.
+
+Nos jury members sont des professionnels en activit\u00e9 dans les secteurs IT, Management et Communication, apportant une \u00e9valuation pertinente et align\u00e9e avec les attentes du march\u00e9.
+
+Si {SCHOOL_NAME} recherche des jury members pour les prochaines sessions, n'h\u00e9sitez pas \u00e0 nous contacter.
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  },
+  'replacement': {
+    subject: 'Remplacement enseignant urgent - Linguistic Communication',
+    body: `Bonjour {DECISION_MAKER},
+
+Linguistic Communication propose un service de remplacement d'enseignants en urgence pour les \u00e9tablissements d'enseignement sup\u00e9rieur.
+
+Nos intervenants qualifi\u00e9s sont disponibles sous court d\u00e9lai pour assurer la continuit\u00e9 p\u00e9dagogique dans les mati\u00e8res suivantes :
+- Informatique et Technologies Num\u00e9riques
+- Management et Marketing
+- Anglais professionnel et TOEIC
+- Communication
+
+N'h\u00e9sitez pas \u00e0 nous contacter en cas de besoin \u00e0 {SCHOOL_NAME}.
+
+Cordialement,
+Andr\u00e9
+Linguistic Communication
++33 6 75 08 12 01
+linguistic-communication.com`
+  }
+};
+
+// Tab switching
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
+// Category chips
+document.querySelectorAll('.cat-chip').forEach(chip => {
+  chip.addEventListener('click', () => chip.classList.toggle('active'));
+});
+
+function getSelectedCategories() {
+  return Array.from(document.querySelectorAll('.cat-chip.active')).map(c => c.dataset.cat);
+}
+
+function extractDomain(url) {
+  if (!url) return null;
+  try {
+    let clean = url.replace(/https?:\/\//gi, '').replace(/\/.*/, '').replace(/\?.*/,'');
+    if (clean.startsWith('www.')) clean = clean.substring(4);
+    return clean.toLowerCase();
+  } catch { return null; }
+}
+
+function deriveEmails(domain) {
+  if (!domain) return [];
+  return [
+    'contact@' + domain,
+    'info@' + domain,
+    'direction@' + domain,
+    'formation@' + domain
+  ];
+}
+
+function suggestDecisionMakers(schoolType) {
+  const type = (schoolType || '').toLowerCase();
+  for (const [key, roles] of Object.entries(SCHOOL_TYPE_TO_ROLES)) {
+    if (type.includes(key) || key.includes(type)) return roles;
+  }
+  return DECISION_MAKERS.slice(0, 2);
+}
+
+function matchCategories(schoolType, selectedCats) {
+  const type = (schoolType || '').toLowerCase();
+  const matched = [];
+  for (const [key, cats] of Object.entries(SCHOOL_TYPE_TO_CATEGORIES)) {
+    if (type.includes(key) || key.includes(type)) {
+      cats.forEach(c => { if (selectedCats.includes(c) && !matched.includes(c)) matched.push(c); });
+    }
+  }
+  if (matched.length === 0) return selectedCats.slice(0, 2);
+  return matched;
+}
+
+function parseLeads(raw) {
+  const lines = raw.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+  const parsed = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    if (!/^ChIJ|^[A-Za-z0-9_-]{20,}/.test(lines[i])) { i++; continue; }
+
+    const lead = { placeId: '', name: '', address: '', phone: '', website: '', rating: 0, reviews: 0, type: '', lat: 0, lng: 0, city: '', country: '', query: '', timestamp: '' };
+    lead.placeId = lines[i]; i++;
+    if (i < lines.length) { lead.name = lines[i]; i++; }
+    if (i < lines.length && /\d/.test(lines[i]) && /France|paris/i.test(lines[i])) { lead.address = lines[i]; i++; }
+    if (i < lines.length && /^\+?\d/.test(lines[i]) && lines[i].includes(' ')) { lead.phone = lines[i]; i++; }
+    if (i < lines.length && /https?:\/\/|www\./i.test(lines[i])) {
+      let url = lines[i];
+      url = url.replace(/(https?:\/\/[^\s]+?)(https?:\/\/)/, '$1');
+      lead.website = url;
+      i++;
+    }
+    if (i < lines.length && /^\d+\.?\d*$/.test(lines[i])) { lead.rating = parseFloat(lines[i]); i++; }
+    if (i < lines.length && /^\d+$/.test(lines[i])) { lead.reviews = parseInt(lines[i]); i++; }
+    if (i < lines.length && !/^ChIJ|^\d+\.\d{4,}|^\d{4}-/.test(lines[i])) { lead.type = lines[i]; i++; }
+    if (i < lines.length && /^\d+\.\d{4,}/.test(lines[i])) {
+      const coords = lines[i];
+      const match = coords.match(/(\d+\.\d+)\s*(\d+\.\d+)/);
+      if (match) { lead.lat = parseFloat(match[1]); lead.lng = parseFloat(match[2]); }
+      i++;
+    }
+    if (i < lines.length && /^[A-Z][a-z]+$/.test(lines[i])) { lead.city = lines[i]; i++; }
+    if (i < lines.length && /^[A-Z][a-z]+$/.test(lines[i])) { lead.country = lines[i]; i++; }
+    if (i < lines.length && !/^\d{4}-|^ChIJ/.test(lines[i])) { lead.query = lines[i]; i++; }
+    if (i < lines.length && /^\d{4}-\d{2}-\d{2}/.test(lines[i])) { lead.timestamp = lines[i]; i++; }
+
+    if (lead.name) parsed.push(lead);
+  }
+  return parsed;
+}
+
+function parseCompactLeads(raw) {
+  const leads = [];
+  const placeIdPattern = /ChIJ[A-Za-z0-9_-]+/g;
+  let matches = [...raw.matchAll(placeIdPattern)];
+
+  if (matches.length === 0) return parseLeads(raw);
+
+  for (let m = 0; m < matches.length; m++) {
+    const start = matches[m].index;
+    const end = m + 1 < matches.length ? matches[m + 1].index : raw.length;
+    const block = raw.substring(start, end).trim();
+
+    const lead = { placeId: '', name: '', address: '', phone: '', website: '', rating: 0, reviews: 0, type: '', lat: 0, lng: 0, city: '', country: '', query: '', timestamp: '' };
+
+    lead.placeId = matches[m][0];
+
+    let rest = block.substring(lead.placeId.length);
+
+    const phoneMatch = rest.match(/(\+\d[\d\s]{8,})/);
+    if (phoneMatch) lead.phone = phoneMatch[1].trim();
+
+    const urlMatch = rest.match(/(https?:\/\/[^\s\]]+)/);
+    if (urlMatch) {
+      let url = urlMatch[1];
+      url = url.replace(/(https?:\/\/[^/]+\/[^\s]*)https?:\/\/.*/, '$1');
+      lead.website = url;
+    }
+
+    const ratingMatch = rest.match(/(\d\.\d)\s*(\d+)\s*\n/);
+    if (ratingMatch) {
+      lead.rating = parseFloat(ratingMatch[1]);
+      lead.reviews = parseInt(ratingMatch[2]);
+    }
+
+    const typePatterns = ['Computer training school', 'Graduate school', 'Private educational institution', 'Vocational school', 'Senior high school', 'High school', 'University', 'Business school'];
+    for (const tp of typePatterns) {
+      if (rest.includes(tp)) { lead.type = tp; break; }
+    }
+
+    const coordMatch = rest.match(/(\d{2}\.\d{4,})\s*(\d+\.\d{4,})/);
+    if (coordMatch) {
+      lead.lat = parseFloat(coordMatch[1]);
+      lead.lng = parseFloat(coordMatch[2]);
+    }
+
+    const cityMatch = rest.match(/(\d+\.\d+)\s*([A-Z][a-z]+)\s*([A-Z][a-z]+)/);
+    if (cityMatch) {
+      lead.city = cityMatch[2];
+      lead.country = cityMatch[3];
+    }
+
+    const tsMatch = rest.match(/\d{4}-\d{2}-\d{2}T[\d:.]+Z/);
+    if (tsMatch) lead.timestamp = tsMatch[0];
+
+    const queryMatch = rest.match(/([A-Z][A-Za-z\s]+(?:in\s+[A-Za-z,\s]+))/);
+    if (queryMatch) lead.query = queryMatch[1].trim();
+
+    const afterPlaceId = rest.replace(/^\s*/, '');
+    const nameEnd = afterPlaceId.search(/\d|https?:\/\/|\+33/);
+    if (nameEnd > 0) {
+      let nameAddr = afterPlaceId.substring(0, nameEnd).trim();
+      const addrMatch = nameAddr.match(/(\d+[\s\-].*(?:Paris|France|Rue|Bd|Imp|Avenue).*)$/i);
+      if (addrMatch) {
+        lead.address = addrMatch[1].trim();
+        lead.name = nameAddr.substring(0, nameAddr.indexOf(addrMatch[1])).trim();
+      } else {
+        lead.name = nameAddr;
+      }
+    }
+
+    if (lead.name) leads.push(lead);
+  }
+
+  return leads;
+}
+
+function enrichLead(lead, selectedCats) {
+  const enriched = { ...lead, emails: [], decisionMakers: [], categories: [], status: 'new', selected: false };
+
+  if (document.getElementById('optEmails').checked) {
+    const domain = extractDomain(lead.website);
+    if (domain) {
+      enriched.emails = deriveEmails(domain);
+      enriched.status = 'enriched';
+    }
+  }
+
+  if (document.getElementById('optDecisionMakers').checked) {
+    enriched.decisionMakers = suggestDecisionMakers(lead.type);
+  }
+
+  enriched.categories = matchCategories(lead.type, selectedCats);
+
+  return enriched;
+}
+
+function parseAndEnrich() {
+  const raw = document.getElementById('rawLeads').value;
+  if (!raw.trim()) { alert('Please paste your lead data first.'); return; }
+
+  const selectedCats = getSelectedCategories();
+  if (selectedCats.length === 0) { alert('Please select at least one category.'); return; }
+
+  let parsed = parseCompactLeads(raw);
+  if (parsed.length === 0) parsed = parseLeads(raw);
+
+  if (parsed.length === 0) {
+    alert('Could not parse any leads. Please check the data format.');
+    return;
+  }
+
+  leads = parsed.map(l => enrichLead(l, selectedCats));
+  currentPage = 1;
+
+  updateStats();
+  renderTable();
+  renderTemplates();
+
+  document.querySelector('[data-tab="leads"]').click();
+}
+
+function updateStats() {
+  document.getElementById('statTotal').textContent = leads.length;
+  document.getElementById('statEnriched').textContent = leads.filter(l => l.status === 'enriched').length;
+  document.getElementById('statEmails').textContent = leads.reduce((acc, l) => acc + l.emails.length, 0);
+  const allCats = new Set();
+  leads.forEach(l => l.categories.forEach(c => allCats.add(c)));
+  document.getElementById('statCategories').textContent = allCats.size;
+}
+
+function renderTable() {
+  const tbody = document.getElementById('leadsBody');
+  const empty = document.getElementById('emptyState');
+  const pag = document.getElementById('pagination');
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const statusFilter = document.getElementById('filterStatus').value;
+  const catFilter = document.getElementById('filterCategory').value;
+
+  let filtered = leads.filter(l => {
+    if (search && !l.name.toLowerCase().includes(search) && !l.emails.join(' ').toLowerCase().includes(search) && !l.city.toLowerCase().includes(search)) return false;
+    if (statusFilter && l.status !== statusFilter) return false;
+    if (catFilter && !l.categories.includes(catFilter)) return false;
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = leads.length === 0 ? 'block' : 'block';
+    empty.querySelector('p').textContent = leads.length === 0 ? 'Go to the Import tab to paste and parse your n8n leads' : 'No leads match your filters';
+    pag.style.display = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+
+  const totalPages = Math.ceil(filtered.length / perPage);
+  if (currentPage > totalPages) currentPage = totalPages;
+  const start = (currentPage - 1) * perPage;
+  const pageLeads = filtered.slice(start, start + perPage);
+
+  tbody.innerHTML = pageLeads.map((l, idx) => {
+    const globalIdx = leads.indexOf(l);
+    const emailHtml = l.emails.length > 0
+      ? l.emails.slice(0, 2).map(e => `<a class="email-link" href="mailto:${e}">${e}</a>`).join('<br>') + (l.emails.length > 2 ? `<br><span style="color:#b2bec3;font-size:0.75rem;">+${l.emails.length - 2} more</span>` : '')
+      : '<span style="color:#b2bec3;">--</span>';
+    const phoneHtml = l.phone ? `<a class="phone-link" href="tel:${l.phone}">${l.phone}</a>` : '--';
+    const websiteHtml = l.website ? `<a class="website-link" href="${l.website}" target="_blank">${extractDomain(l.website) || l.website}</a>` : '--';
+    const ratingHtml = l.rating ? `<span class="rating">${'\u2605'.repeat(Math.round(l.rating))}</span> ${l.rating} (${l.reviews})` : '--';
+    const statusHtml = `<span class="badge badge-${l.status}">${l.status}</span>`;
+    const catHtml = `<div class="cat-tags">${l.categories.map(c => `<span class="cat-tag">${CATEGORIES[c] || c}</span>`).join('')}</div>`;
+    const dmHtml = l.decisionMakers.length > 0 ? `<span class="decision-maker">${l.decisionMakers[0]}</span>` : '--';
+
+    return `<tr>
+      <td><input type="checkbox" ${l.selected ? 'checked' : ''} onchange="toggleSelect(${globalIdx})"></td>
+      <td><strong>${l.name}</strong><br><span style="font-size:0.75rem;color:#636e72;">${l.address || l.city || ''}</span></td>
+      <td>${emailHtml}</td>
+      <td>${phoneHtml}</td>
+      <td>${websiteHtml}</td>
+      <td>${l.type || '--'}</td>
+      <td>${ratingHtml}</td>
+      <td>${statusHtml}</td>
+      <td>${catHtml}</td>
+      <td>${dmHtml}</td>
+      <td><button class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem;" onclick="showEmailForLead(${globalIdx})">Email</button></td>
+    </tr>`;
+  }).join('');
+
+  pag.style.display = 'flex';
+  document.getElementById('pageInfo').textContent = `${start + 1}-${Math.min(start + perPage, filtered.length)} of ${filtered.length} leads`;
+  document.getElementById('prevBtn').disabled = currentPage <= 1;
+  document.getElementById('nextBtn').disabled = currentPage >= totalPages;
+}
+
+function changePage(dir) {
+  currentPage += dir;
+  renderTable();
+}
+
+function toggleSelect(idx) { leads[idx].selected = !leads[idx].selected; }
+function toggleSelectAll() {
+  const checked = document.getElementById('selectAll').checked;
+  leads.forEach(l => l.selected = checked);
+  renderTable();
+}
+
+function showEmailForLead(idx) {
+  const lead = leads[idx];
+  const cat = lead.categories[0] || 'bts-bachelor';
+  const template = EMAIL_TEMPLATES[cat];
+  if (!template) return;
+
+  const body = template.body
+    .replace(/\{SCHOOL_NAME\}/g, lead.name)
+    .replace(/\{DECISION_MAKER\}/g, lead.decisionMakers[0] || 'Madame, Monsieur');
+
+  document.getElementById('modalTitle').textContent = `Email: ${template.subject.replace(/\{SCHOOL_NAME\}/g, lead.name)}`;
+  document.getElementById('modalContent').textContent = body;
+  document.getElementById('emailModal').classList.add('active');
+}
+
+function generateAllEmails() {
+  const selected = leads.filter(l => l.selected);
+  if (selected.length === 0) { alert('Please select leads first using the checkboxes.'); return; }
+
+  let allEmails = '';
+  selected.forEach(lead => {
+    lead.categories.forEach(cat => {
+      const template = EMAIL_TEMPLATES[cat];
+      if (!template) return;
+      const body = template.body
+        .replace(/\{SCHOOL_NAME\}/g, lead.name)
+        .replace(/\{DECISION_MAKER\}/g, lead.decisionMakers[0] || 'Madame, Monsieur');
+      allEmails += `--- ${lead.name} (${CATEGORIES[cat]}) ---\nTo: ${lead.emails[0] || 'N/A'}\nSubject: ${template.subject.replace(/\{SCHOOL_NAME\}/g, lead.name)}\n\n${body}\n\n\n`;
+    });
+  });
+
+  document.getElementById('modalTitle').textContent = `Outreach Emails (${selected.length} leads)`;
+  document.getElementById('modalContent').textContent = allEmails;
+  document.getElementById('emailModal').classList.add('active');
+}
+
+function closeModal() { document.getElementById('emailModal').classList.remove('active'); }
+
+function copyModalContent() {
+  const text = document.getElementById('modalContent').textContent;
+  navigator.clipboard.writeText(text).then(() => alert('Copied to clipboard!')).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('Copied to clipboard!');
+  });
+}
+
+function exportCSV() {
+  if (leads.length === 0) { alert('No leads to export.'); return; }
+  const headers = ['Name', 'Email 1', 'Email 2', 'Phone', 'Website', 'Address', 'Type', 'Rating', 'Reviews', 'City', 'Country', 'Categories', 'Decision Maker', 'Status', 'Place ID'];
+  const rows = leads.map(l => [
+    l.name, l.emails[0] || '', l.emails[1] || '', l.phone, l.website, l.address, l.type,
+    l.rating, l.reviews, l.city, l.country,
+    l.categories.map(c => CATEGORIES[c]).join('; '),
+    l.decisionMakers[0] || '', l.status, l.placeId
+  ]);
+
+  let csv = headers.join(',') + '\n';
+  rows.forEach(row => {
+    csv += row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',') + '\n';
+  });
+
+  downloadFile(csv, 'leads-enriched.csv', 'text/csv');
+}
+
+function exportHubSpot() {
+  if (leads.length === 0) { alert('No leads to export.'); return; }
+  const headers = ['First Name', 'Last Name', 'Email', 'Phone Number', 'Company Name', 'Website', 'City', 'Country', 'Lead Status', 'Notes'];
+  const rows = leads.map(l => [
+    l.name, '', l.emails[0] || '', l.phone, l.name, l.website, l.city, l.country,
+    l.status === 'enriched' ? 'NEW' : 'UNQUALIFIED',
+    `Type: ${l.type}. Categories: ${l.categories.map(c => CATEGORIES[c]).join(', ')}. Decision maker: ${l.decisionMakers[0] || 'N/A'}.`
+  ]);
+
+  let csv = headers.join(',') + '\n';
+  rows.forEach(row => {
+    csv += row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',') + '\n';
+  });
+
+  downloadFile(csv, 'leads-hubspot-import.csv', 'text/csv');
+}
+
+function downloadFile(content, filename, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function renderTemplates() {
+  const container = document.getElementById('templateList');
+  const selectedCats = getSelectedCategories();
+
+  container.innerHTML = selectedCats.map(cat => {
+    const template = EMAIL_TEMPLATES[cat];
+    if (!template) return '';
+    return `<div class="section" style="margin-bottom:16px;">
+      <h2>${CATEGORIES[cat]}</h2>
+      <p style="font-size:0.85rem;color:#636e72;margin-bottom:8px;"><strong>Subject:</strong> ${template.subject}</p>
+      <pre style="background:#f1f3f5;padding:16px;border-radius:8px;font-size:0.85rem;white-space:pre-wrap;line-height:1.5;">${template.body}</pre>
+      <div class="btn-group">
+        <button class="btn btn-secondary" onclick="copyTemplate('${cat}')">Copy Template</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function copyTemplate(cat) {
+  const template = EMAIL_TEMPLATES[cat];
+  if (!template) return;
+  const text = `Subject: ${template.subject}\n\n${template.body}`;
+  navigator.clipboard.writeText(text).then(() => alert('Template copied!')).catch(() => alert('Could not copy.'));
+}
+
+function loadSample() {
+  document.getElementById('rawLeads').value = `ChIJsb-FqpFv5kcRdntFjjxAbMo
+Iris - School Sup\u00e9rieure D'informatique
+6-8 Imp. des 2 Cousins, 75017 Paris, France
++33 1 44 01 86 70
+https://ecoleiris.fr/
+4.2
+18
+Computer training school
+48.8849521 2.2933554
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.276Z
+
+ChIJXxt94INx5kcRfhyCJBjbwvg
+Insta - Cfa School
+17 Rue Linn\u00e9, 75005 Paris, France
++33 1 82 83 55 30
+http://www.insta.fr/
+4.4
+25
+Computer training school
+48.8448473 2.354549
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.276Z
+
+ChIJyzIzN0xu5kcRDxjMkUmEaHw
+ESCG Paris (\u00c9cole sup\u00e9rieure de commerce et de gestion)
+166 Bd du Montparnasse, 75014 Paris, France
++33 1 56 02 00 50
+https://www.escg-paris.com/
+3.2
+71
+Private educational institution
+48.8398811 2.3353892
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.276Z
+
+ChIJhykz3TZw5kcRxWyKjXNCos0
+Private School Saint-Nicolas Paris 6
+92 Rue de Vaugirard, 75006 Paris, France
++33 1 42 22 83 60
+https://www.lyceesaintnicolas.com/
+3.7
+105
+Vocational school
+48.8469414 2.3257276
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.277Z
+
+ChIJ_2GTWglu5kcRQZBTtxK2v_A
+Private School Bossuet Notre-Dame
+17 Rue Yves Toudic, 75010 Paris, France
++33 1 42 08 01 47
+https://www.bossuetnotredame.org/
+Senior high school
+48.8703796 2.3631819
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.277Z
+
+ChIJBYRz2Fdw5kcRcwYAlGV0NjM
+EFFICOM Paris
+64 Rue du Ranelagh, 75016 Paris, France
++33 1 41 17 12 12
+https://www.efficom.fr/
+3.7
+63
+Graduate school
+48.8552176 2.2728615
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.277Z
+
+ChIJk20r-sVx5kcRMfAzQS4DB2s
+Notre-Dame De Sion Paris
+61 Rue Notre Dame des Champs, 75006 Paris, France
++33 1 44 32 06 70
+http://www.sion-paris.fr/
+High school
+48.8439158 2.3321231
+Paris
+France
+BTS SIO private schools in Paris in Paris, France
+2026-04-03T17:01:26.277Z`;
+}
+
+function clearAll() {
+  document.getElementById('rawLeads').value = '';
+  leads = [];
+  currentPage = 1;
+  updateStats();
+  renderTable();
+}
+
+// Initial render
+renderTemplates();
+renderTable();
+</script>
+</body>
+</html>
